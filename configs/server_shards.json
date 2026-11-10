@@ -1,0 +1,12 @@
+{
+  "schema_version": "fragile-soft.sharding.v1",
+  "population": 2000,
+  "recommended_shards": 20,
+  "instances_per_shard": 100,
+  "stable_key": "benchmark_instance_id",
+  "assignment": "int(sha256(benchmark_instance_id)[0:8],16) % shard_count",
+  "retry_policy": {"max_attempts": 2, "same_seed_required": true, "new_code_requires_new_release": true},
+  "resource_estimate": {"cpu_threads_per_worker": 2, "memory_gb_per_worker": 4, "gpu_optional": true, "disk_gb_per_shard": 2},
+  "promotion": ["36-instance qualification", "100-instance smoke shard", "2000-instance full matrix"],
+  "executor_contract": {"episode_executor": "module:function", "target_provider": "module:function for E2", "process_boundary_required": true}
+}

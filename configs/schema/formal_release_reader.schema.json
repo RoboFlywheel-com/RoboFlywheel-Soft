@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://configs/schema/formal_release_reader",
+  "title": "SoftSim formal release reader input",
+  "type": "object",
+  "required": ["asset_release_v2", "physical_release_v12", "benchmark_manifest", "method_contract"],
+  "properties": {
+    "asset_release_v2": {"type": "object", "required": ["release_id", "schema_version", "publishable", "ledger_sha256", "population_count"], "properties": {"schema_version": {"const": 2}, "publishable": {"const": true}, "ledger_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "population_count": {"type": "integer", "minimum": 1}}, "additionalProperties": true},
+    "physical_release_v12": {"type": "object", "required": ["release_id", "schema_version", "publishable", "population_count", "index_sha256"], "properties": {"schema_version": {"const": 12}, "publishable": {"const": true}}, "additionalProperties": true},
+    "benchmark_manifest": {"type": "array", "items": {"type": "object", "required": ["benchmark_instance_id", "sample_id", "asset_revision_id", "physical_bundle_id", "physical_join_status", "formal_join_ready", "qualification_status", "formal_e3_a_manifest"], "properties": {"physical_join_status": {"const": "joined_verified"}, "formal_join_ready": {"const": true}, "qualification_status": {"const": "qualified"}, "formal_e3_a_manifest": {"const": true}}}},
+    "method_contract": {"type": "object", "required": ["method_id", "genesis_version", "solver", "ipc_used", "uipc_used"]}
+  },
+  "additionalProperties": true
+}

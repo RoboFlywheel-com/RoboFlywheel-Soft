@@ -1,0 +1,40 @@
+{
+  "schema_version": "fragile-soft.config.v1",
+  "benchmark_id": "softsim-fragile-soft-v0.1",
+  "population_label": "benchmark instances",
+  "target_instances": 2000,
+  "canonical_groups": [
+    {"canonical_group_id": "soft_food_form", "source_asset_id": "tofu", "split": "calibration"},
+    {"canonical_group_id": "compressible_fruit", "source_asset_id": "banana", "split": "calibration"},
+    {"canonical_group_id": "gel_block", "source_asset_id": "avocado", "split": "calibration"},
+    {"canonical_group_id": "mashed_food", "source_asset_id": "play_dough", "split": "calibration"},
+    {"canonical_group_id": "sponge_foam", "source_asset_id": "slow_rise_foam_toy", "split": "calibration"},
+    {"canonical_group_id": "soft_fruit", "source_asset_id": "tomato", "split": "hidden_test"},
+    {"canonical_group_id": "thin_filled_shell", "source_asset_id": "inflatable_bladder", "split": "hidden_test"},
+    {"canonical_group_id": "paper_film_shell", "source_asset_id": "memory_foam_cushion", "split": "hidden_test"},
+    {"canonical_group_id": "weak_rubber", "source_asset_id": "silicone_organ", "split": "hidden_test"},
+    {"canonical_group_id": "fragile_composite", "source_asset_id": "bean_filled_toy", "split": "hidden_test"}
+  ],
+  "geometry_revisions_per_group": 20,
+  "difficulty_ids": ["d00", "d01", "d02", "d03", "d04", "d05", "d06", "d07", "d08", "d09"],
+  "local_limits": {"max_instances": 6, "max_qualification_instances": 6},
+  "server_required_for_full_matrix": true,
+  "require_physical_join_for_formal": true,
+  "physical_join_map_required": true,
+  "unique_geometry_claim": false,
+  "qualification_required": true,
+  "output_contract": {
+    "instance_manifest": "instance_manifest.jsonl",
+    "material_records": "material_records.jsonl",
+    "material_config_records": "material_config_records.jsonl",
+    "config_records": "config_records.jsonl",
+    "episode_records": "episode_records.jsonl",
+    "metric_records": "metric_records.jsonl",
+    "video_keyframe_manifest": "video_keyframe_manifest.jsonl",
+    "video_manifest": "video_manifest.jsonl",
+    "keyframe_manifest": "keyframe_manifest.jsonl",
+    "physical_join_report": "physical_join_report.json",
+    "qualification_report": "qualification_report.json",
+    "failure_list": "failed_repair_replace.jsonl"
+  }
+}

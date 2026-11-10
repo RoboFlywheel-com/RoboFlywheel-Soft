@@ -1,0 +1,9 @@
+method,source_split,n,status_success_n,status_success_count,task_success_n,task_success_count,intact_success_n,intact_success_count,damage_failure_n,damage_failure_count,exclusive_damage_failure_n,exclusive_damage_failure_count,exclusive_slip_failure_n,exclusive_slip_failure_count,damage_proxy_n,damage_proxy_mean
+deligrasp_prior,calibration,660,660,600,660,600,660,0,660,660,660,60,660,0,660,0.5948747983787879
+deligrasp_prior,hidden_test,340,340,200,340,200,340,0,340,340,340,140,340,0,340,0.45469048364705883
+fixed,calibration,660,660,595,660,595,660,0,660,660,660,65,660,0,660,0.7107696615454545
+fixed,hidden_test,340,340,245,340,245,340,0,340,340,340,95,340,0,340,0.6247652062058823
+privileged_oracle,calibration,660,660,360,660,360,660,0,660,660,660,300,660,0,660,0.5099398495909091
+privileged_oracle,hidden_test,340,340,200,340,200,340,0,340,340,340,140,340,0,340,0.4631214159117647
+reactive_slip,calibration,660,660,634,660,634,660,0,660,660,660,26,660,0,660,0.7438007696363637
+reactive_slip,hidden_test,340,340,245,340,245,340,0,340,340,340,95,340,0,340,0.7837109606764705

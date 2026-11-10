@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-26",
+  "tests": {
+    "passed": 189,
+    "skipped": 4,
+    "failed": 0
+  },
+  "python": "3.14.4",
+  "numpy": "2.5.4",
+  "trimesh": "4.7.4",
+  "analysis_csvs_verified": 21,
+  "paper_tables_match_manuscript": true,
+  "noneditable_install": "passed",
+  "installed_fixtures": [
+    "e1",
+    "e2",
+    "e3a",
+    "physical_agent",
+    "asset_inventory",
+    "fragile_qualification"
+  ],
+  "gpu_simulation": "not_run",
+  "paid_api_calls": 0
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "max_faces": 2000000,
+  "max_components": 128,
+  "families": {
+    "cloth_sheet": {
+      "max_faces": 20000,
+      "max_components": 1
+    },
+    "garment": {
+      "max_faces": 2000000,
+      "max_components": 64
+    },
+    "solid": {
+      "max_faces": 2000000,
+      "max_components": 128
+    }
+  }
+}
+

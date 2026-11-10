@@ -1,0 +1,9 @@
+{
+  "sample_id": "negative-no-trace",
+  "asset_revision_id": "negative-no-trace-r001",
+  "physical_bundle_id": "negative-no-trace-bundle",
+  "dataset_release_id": "negative",
+  "status": "verified",
+  "verification_state": "verified_behavior_contract",
+  "note": "Missing agent_trace_ref; the formal reader must reject this row."
+}

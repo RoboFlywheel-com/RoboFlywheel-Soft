@@ -1,0 +1,35 @@
+{
+  "source_commit": "d447e95c7d62d2797d947908587f325fbb1e3db2",
+  "source_snapshot": "2026-10-26",
+  "included_components": [
+    "asset maintenance and procedural cloth",
+    "physical authoring",
+    "Genesis adapter and geometry tooling",
+    "fragile-soft benchmark",
+    "formal experiment runner",
+    "manuscript analysis CSVs and tables"
+  ],
+  "preparation": {
+    "files": 306,
+    "credential_fields_removed": 2,
+    "credential_literals_removed": 4
+  },
+  "excluded_components": [
+    "internal cloud launchers and credentials",
+    "raw asset and video payloads",
+    "evaluator-only hidden parameter sidecars",
+    "individual human-study responses",
+    "third-party model source and checkpoints"
+  ],
+  "release_preparation": {
+    "license": "Apache-2.0",
+    "packaged_runtime_tools": true,
+    "credentials": "environment only in distributed configs and transports",
+    "documentation_languages": [
+      "English",
+      "Chinese"
+    ],
+    "reference_analysis_snapshot": "2026-10-25",
+    "csv_provenance_paths": "portable external-evidence references; original hashes retained"
+  }
+}

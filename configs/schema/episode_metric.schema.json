@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softsim.local/schema/fragile-soft-metric-v1.json",
+  "type": "object",
+  "required": ["schema_version", "evaluator_id", "episode_id", "instance_id", "backend_status", "failure_codes", "metrics", "action_replay_hash", "metric_record_hash"],
+  "properties": {
+    "schema_version": {"const": "fragile-soft.metric.v1"},
+    "evaluator_id": {"const": "fragile-soft.evaluator.v1"},
+    "backend_status": {"enum": ["completed", "failed", "unsupported"]},
+    "failure_codes": {"type": "array", "items": {"type": "string"}},
+    "metrics": {"type": "object", "required": ["task_success", "damage_onset", "terminal_damage_fraction", "integrity_score", "safe_force_window", "contact_fraction", "slip_distance_m", "max_penetration_m", "finite_fraction", "converged"]},
+    "action_replay_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "metric_record_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

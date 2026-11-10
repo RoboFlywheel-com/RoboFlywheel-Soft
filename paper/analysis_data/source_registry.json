@@ -1,0 +1,32 @@
+{
+  "source": "RFW-S arXiv manuscript analysis snapshot (2026-10-25)",
+  "files": {
+    "agent_state_counts.csv": "00912c5a443fa2df55dd7dbf927e86ed0a7f74af8128eef45c9c7b4fc839f08b",
+    "application_by_condition.csv": "05de677e6cd5b6b3aba0826e38e40238fea2efd6890538c7608868b98c41f9dc",
+    "application_by_method_split.csv": "0eba2f98a2adc92c2aa0d3dfaf5fc0f08593b792d5ffd342ccf0f6bb2a41a52a",
+    "application_by_object.csv": "f7395e00d8fb82c16c02c671903ecd5c0f25a40fe30f7bff97632cac145cbbfd",
+    "application_long.csv": "f2ed408c5b754ea5b7d57f1e7d1bdbf4db7310a3a6a5da72d3dca02402cc817b",
+    "audit_long.csv": "84d646e77bc2309001f984de5a678419ca38e928199ff317d7ee609896f391dc",
+    "calibration_independent_by_method.csv": "963bf3d690c093a6cb6547d37a45396cf73c836b08caa79c5f8277975a8c726a",
+    "calibration_independent_transitions.csv": "61e2374a3cdcdcbf8b4cded263aeca5712e058d49a35925999871c188782b9c4",
+    "corrected_case_index.csv": "1d0ced69a002a4cc534bc6931720989615ab5feb5ccb1829d9840b00099756b4",
+    "coverage_by_type.csv": "3b43c77f591443f29fb94b7d6cec4c6880522f96caf59b91c914ac4b459c1fbc",
+    "experiment_summary.csv": "4e55e53fbd290be54585c72d4d0ab033beff37666be59c4e7f0753072811bc5b",
+    "filter_by_method_budget.csv": "ad08970942eb0cbe03afea2f1587235dd7af2b7184be6a6ad35123a7ce02c79e",
+    "filter_long.csv": "62deba610b87f3b92b81e53be0c4d9a372593d9cbaed20f7da1df9ff270b1903",
+    "human_rating_counts.csv": "c15db03dad67bf73add0f5707f515496b3002e07b6f55c66f1cb78310edc7515",
+    "parameter_initialization_audit.csv": "0565e8a07a8287e157d0da2ceaae7cb46123eb26aee74401b5e2942fa49c05f9",
+    "production_states_by_family.csv": "bfa8cfb753443b994d28c1fc4299498fdad974348157945385b7a5328e5a0086",
+    "recovery_by_method_budget.csv": "d6c26258651ccea563d72d084989fbf2b526d885718713ba3492320f2194922c",
+    "recovery_long.csv": "246f2cdeced9c08407c02076e5131c8139b668fd670b10001336196606fef465",
+    "routing_execution.csv": "d16ff54b656cf3ec82f3db9523b62bb77cabe90ab7b20b3b96758e80442e819f",
+    "structure_cases.csv": "958a9f9abafeb48bf541b8218630e0ffd17c0d5bb92f99e3a417c663983abe54",
+    "verification_by_family.csv": "91cd79eb504206bdc132183c7dbe614c7a1727e064a3f6442d7801e36fbb48bb"
+  },
+  "note": "Derived per-run and aggregate CSVs; full meshes, raw trajectories, individual reviewer responses, and evaluator target sidecars are distributed separately or excluded.",
+  "upstream_files_before_path_portability": {
+    "corrected_case_index.csv": "9f7d1ce81093317ff14e13ade420116ee3ba22891cca82031f4a806babe9c0ec",
+    "structure_cases.csv": "acd82a46f70b9acbca7ca419a859688c932eb71be6f8fb593ff5585f846d6873"
+  },
+  "path_portability": "Two provenance-only columns replace private host paths with external-evidence-relative references. Numerical fields are unchanged; referenced production evidence is distributed separately."
+}

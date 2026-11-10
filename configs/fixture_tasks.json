@@ -1,0 +1,11 @@
+{
+  "schema_name": "softsim.fixture_contract",
+  "schema_version": 1,
+  "scenarios": [
+    {"id": "first_pass", "expected_status": "accepted_first_pass"},
+    {"id": "corrected", "expected_status": "corrected_then_accepted", "minimum_calibration_candidates": 2},
+    {"id": "budget_exhausted", "expected_status": "rejected_model_limit"}
+  ],
+  "synthetic": true,
+  "publishable": false
+}

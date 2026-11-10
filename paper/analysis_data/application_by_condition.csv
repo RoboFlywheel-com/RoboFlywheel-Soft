@@ -1,0 +1,4 @@
+condition,n,status_success_n,status_success_count,task_success_n,task_success_count,intact_success_n,intact_success_count,damage_failure_n,damage_failure_count,exclusive_damage_failure_n,exclusive_damage_failure_count,exclusive_slip_failure_n,exclusive_slip_failure_count,damage_proxy_n,damage_proxy_mean
+high,1332,1332,1120,1332,1120,1332,0,1332,1332,1332,212,1332,0,1332,0.7247893469294294
+low,1336,1336,956,1336,956,1336,0,1336,1336,1336,380,1336,0,1336,0.5810033281362276
+medium,1332,1332,1003,1332,1003,1332,0,1332,1332,1332,329,1332,0,1332,0.5544236023498498

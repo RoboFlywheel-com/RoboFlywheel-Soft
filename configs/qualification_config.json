@@ -1,0 +1,22 @@
+{
+  "schema_version": "fragile-soft.qualification-config.v1",
+  "qualification_id": "fragile-soft-qualification-v1",
+  "qualification_groups": [
+    {"canonical_group_id": "soft_food_form", "source_asset_id": "tofu", "split": "calibration"},
+    {"canonical_group_id": "compressible_fruit", "source_asset_id": "banana", "split": "calibration"},
+    {"canonical_group_id": "mashed_food", "source_asset_id": "dough", "split": "hidden_test"},
+    {"canonical_group_id": "sponge_foam", "source_asset_id": "slow_rise_foam_toy", "split": "hidden_test"}
+  ],
+  "qualification_revisions_per_group": 3,
+  "qualification_difficulty_ids": ["d00", "d02", "d05"],
+  "formal_requires_physical_join": true,
+  "formal_requires_episode_runner": true,
+  "seeds": [0, 1],
+  "thresholds": {
+    "no_contact_damage_max": 0.000000001,
+    "monotonic_tolerance": 0.03,
+    "repeat_variance_max": 0.01,
+    "safe_window_min_width_n": 0.0,
+    "max_penetration_m": 0.004
+  }
+}

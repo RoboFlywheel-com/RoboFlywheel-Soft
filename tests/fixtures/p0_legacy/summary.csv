@@ -1,0 +1,13 @@
+asset_id,force_level,force_n_per_finger,finite_fraction,final_lift_mm,final_damaged_percent
+tofu,low,6,1,5.0,0.7
+tofu,medium,15,1,12.4,8.5
+tofu,high,40,1,16.8,54
+banana,low,6,1,12.1,0
+banana,medium,16,1,24.1,9.4
+banana,high,28,1,18.5,85.4
+dough,low,4,1,0.5,0
+dough,medium,10,1,1.1,0
+dough,high,20,1,2.1,0
+slow_rise_foam_toy,low,5,1,29.2,0
+slow_rise_foam_toy,medium,12,1,29.0,0
+slow_rise_foam_toy,high,24,1,28.7,0

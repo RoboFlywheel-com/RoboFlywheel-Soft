@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "softsim-fragile-soft-benchmark"
+version = "0.1.0"
+description = "Auditable fragile-soft benchmark instance constructor"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+
+[project.scripts]
+fragile-soft-benchmark = "fragile_soft_benchmark.cli:main"
+
+[tool.setuptools]
+packages = ["fragile_soft_benchmark"]
+
+[tool.setuptools.package-dir]
+fragile_soft_benchmark = "."

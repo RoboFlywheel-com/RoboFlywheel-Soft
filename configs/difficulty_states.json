@@ -1,0 +1,16 @@
+{
+  "schema_version": "fragile-soft.difficulty.v1",
+  "allowed_axes": ["force_scale", "damage_onset_scale", "damage_complete_scale", "contact_sensitivity", "residual_stiffness_scale", "yield_scale", "gel_relaxation_scale"],
+  "states": {
+    "d00": {"force_scale": 0.8, "damage_onset_scale": 1.2, "damage_complete_scale": 1.2, "contact_sensitivity": 0.9},
+    "d01": {"force_scale": 0.9, "damage_onset_scale": 1.1, "damage_complete_scale": 1.1, "contact_sensitivity": 0.95},
+    "d02": {"force_scale": 1.0, "damage_onset_scale": 1.0, "damage_complete_scale": 1.0, "contact_sensitivity": 1.0},
+    "d03": {"force_scale": 1.1, "damage_onset_scale": 0.95, "damage_complete_scale": 0.98, "contact_sensitivity": 1.0},
+    "d04": {"force_scale": 1.2, "damage_onset_scale": 0.9, "damage_complete_scale": 0.95, "contact_sensitivity": 1.05},
+    "d05": {"force_scale": 0.95, "damage_onset_scale": 1.0, "damage_complete_scale": 1.0, "contact_sensitivity": 0.75},
+    "d06": {"force_scale": 1.05, "damage_onset_scale": 1.0, "damage_complete_scale": 1.0, "contact_sensitivity": 1.25},
+    "d07": {"force_scale": 1.0, "damage_onset_scale": 0.85, "damage_complete_scale": 0.9, "contact_sensitivity": 1.0, "residual_stiffness_scale": 0.75},
+    "d08": {"force_scale": 1.15, "damage_onset_scale": 1.05, "damage_complete_scale": 1.05, "contact_sensitivity": 1.1, "yield_scale": 0.9},
+    "d09": {"force_scale": 1.25, "damage_onset_scale": 0.8, "damage_complete_scale": 0.88, "contact_sensitivity": 1.2, "residual_stiffness_scale": 0.5}
+  }
+}

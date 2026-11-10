@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/task_contract",
+  "type": "object",
+  "required": ["sample_id", "asset_revision_id", "route", "fixed_solver_numerics", "fixed_solver_numerics_hash", "calibration_probe", "heldout_probe", "allowed_physical_parameters"],
+  "properties": {
+    "sample_id": {"type": "string"},
+    "asset_revision_id": {"type": "string"},
+    "fixed_solver_numerics": {"type": "object"},
+    "fixed_solver_numerics_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "allowed_physical_parameters": {"type": "array", "items": {"type": "string"}},
+    "calibration_probe": {"type": "object"},
+    "heldout_probe": {"type": "object"}
+  }
+}

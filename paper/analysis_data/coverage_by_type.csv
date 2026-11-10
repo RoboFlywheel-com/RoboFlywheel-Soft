@@ -1,0 +1,486 @@
+canonical_id,object_type,family,pool_n,physics_pass_n,runtime_pass_n,intersection_n
+baked_soft_food__bagel,Bagel,solid,206,86,206,86
+baked_soft_food__baguette,Baguette,solid,207,196,207,196
+baked_soft_food__bread_loaf,Bread Loaf,solid,206,189,206,189
+baked_soft_food__brownie,Brownie,solid,206,111,206,111
+baked_soft_food__bun,Bun,solid,206,167,206,167
+baked_soft_food__cake_slice,Cake Slice,solid,206,161,206,161
+baked_soft_food__chiffon_cake,Chiffon Cake,solid,207,135,207,135
+baked_soft_food__cinnamon_roll,Cinnamon Roll,solid,206,86,206,86
+baked_soft_food__cookie,Cookie,solid,206,36,206,36
+baked_soft_food__cream_cake,Cream Cake,solid,206,134,206,134
+baked_soft_food__cream_puff,Cream Puff,solid,207,103,207,103
+baked_soft_food__cream_roll,Cream Roll,solid,206,146,206,146
+baked_soft_food__crepe,Crepe,solid,206,144,206,144
+baked_soft_food__croissant,Croissant,solid,206,130,206,130
+baked_soft_food__croissant_dough,Croissant Dough,solid,207,155,207,155
+baked_soft_food__cupcake,Cupcake,solid,206,186,206,186
+baked_soft_food__danish_pastry,Danish Pastry,solid,206,119,206,119
+baked_soft_food__dinner_roll,Dinner Roll,solid,206,154,206,154
+baked_soft_food__donut,Donut,solid,207,149,207,149
+baked_soft_food__dough,Dough,solid,206,185,206,185
+baked_soft_food__egg_tart,Egg Tart,solid,206,177,206,177
+baked_soft_food__muffin,Muffin,solid,206,173,206,173
+baked_soft_food__pancake,Pancake,solid,206,112,206,112
+baked_soft_food__pie,Pie,solid,206,190,206,190
+baked_soft_food__pie_crust,Pie Crust,solid,206,193,206,193
+baked_soft_food__pizza_base,Pizza Base,solid,206,125,206,125
+baked_soft_food__pizza_dough,Pizza Dough,solid,206,168,206,168
+baked_soft_food__scone,Scone,solid,206,25,206,25
+baked_soft_food__soft_cookie,Soft Cookie,solid,206,42,206,42
+baked_soft_food__soft_european_bread,Soft European Bread,solid,206,187,206,187
+baked_soft_food__sponge_cake,Sponge Cake,solid,206,135,206,135
+baked_soft_food__sponge_cake_base,Sponge Cake Base,solid,206,120,206,120
+baked_soft_food__swiss_roll,Swiss Roll,solid,206,178,206,178
+baked_soft_food__tart_shell,Tart Shell,solid,206,143,206,143
+baked_soft_food__toast_slice,Toast Slice,solid,206,68,206,68
+baked_soft_food__tortilla,Tortilla,solid,207,130,207,130
+baked_soft_food__waffle,Waffle,solid,206,67,206,67
+coated_textile__shower_curtain,Shower Curtain,cloth_sheet,206,203,206,203
+coated_textile__tarpaulin,Tarpaulin,cloth_sheet,206,206,206,206
+compressible_fruit__apricot,Apricot,solid,206,46,206,46
+compressible_fruit__avocado,Avocado,solid,206,173,206,173
+compressible_fruit__banana,Banana,solid,206,204,206,204
+compressible_fruit__blackberry,Blackberry,solid,207,11,198,11
+compressible_fruit__blueberry_pack,Blueberry Pack,solid,206,54,193,54
+compressible_fruit__cantaloupe_slice,Cantaloupe Slice,solid,207,200,207,200
+compressible_fruit__cherry,Cherry,solid,206,31,182,31
+compressible_fruit__dragon_fruit,Dragon Fruit,solid,206,192,206,192
+compressible_fruit__durian_flesh,Durian Flesh,solid,206,201,206,201
+compressible_fruit__fig,Fig,solid,206,63,206,63
+compressible_fruit__grape_bunch,Grape Bunch,solid,207,158,206,158
+compressible_fruit__grapefruit,Grapefruit,solid,206,158,206,158
+compressible_fruit__jujube,Jujube,solid,206,35,205,35
+compressible_fruit__kiwi,Kiwi,solid,206,45,206,45
+compressible_fruit__lemon,Lemon,solid,206,67,206,67
+compressible_fruit__longan,Longan,solid,206,54,190,54
+compressible_fruit__lychee,Lychee,solid,206,41,201,41
+compressible_fruit__mango,Mango,solid,206,156,206,156
+compressible_fruit__mulberry,Mulberry,solid,207,16,207,16
+compressible_fruit__orange,Orange,solid,206,71,206,71
+compressible_fruit__papaya,Papaya,solid,206,177,206,177
+compressible_fruit__peach,Peach,solid,206,40,206,40
+compressible_fruit__persimmon,Persimmon,solid,206,78,206,78
+compressible_fruit__pineapple_chunk,Pineapple Chunk,solid,206,173,206,173
+compressible_fruit__plum,Plum,solid,206,15,206,15
+compressible_fruit__raspberry,Raspberry,solid,206,15,203,15
+compressible_fruit__ripe_pear,Ripe Pear,solid,206,152,206,152
+compressible_fruit__soft_apple,Soft Apple,solid,206,47,206,47
+compressible_fruit__strawberry,Strawberry,solid,206,16,199,16
+compressible_fruit__tomato,Tomato,solid,206,63,205,63
+compressible_fruit__watermelon_slice,Watermelon Slice,solid,206,185,206,185
+cushion_shell__anti_decubitus_cushion,Anti-decubitus Cushion,shell,206,165,206,165
+cushion_shell__baby_cushion,Baby Cushion,shell,206,192,206,192
+cushion_shell__beanbag_chair,Beanbag Chair,shell,206,203,206,203
+cushion_shell__bed_rail_cushion,Bed Rail Cushion,shell,206,187,206,187
+cushion_shell__coccyx_cushion,Coccyx Cushion,shell,207,177,207,177
+cushion_shell__cushion_cover,Cushion Cover,shell,206,206,206,206
+cushion_shell__cushion_foam_core,Cushion Foam Core,shell,207,137,207,137
+cushion_shell__donut_cushion,Donut Cushion,shell,206,205,206,205
+cushion_shell__floor_cushion,Floor Cushion,shell,206,157,206,157
+cushion_shell__flotation_cushion,Flotation Cushion,shell,206,179,206,179
+cushion_shell__futon,Futon,shell,207,179,207,179
+cushion_shell__headboard_cushion,Headboard Cushion,shell,206,190,206,190
+cushion_shell__heel_cushion,Heel Cushion,shell,207,161,207,161
+cushion_shell__knee_pillow,Knee Pillow,shell,207,194,207,194
+cushion_shell__latex_cushion,Latex Cushion,shell,206,146,206,146
+cushion_shell__latex_pillow,Latex Pillow,shell,207,157,207,157
+cushion_shell__memory_foam_cushion,Memory Foam Cushion,shell,207,135,207,135
+cushion_shell__memory_foam_pillow,Memory Foam Pillow,shell,206,130,206,130
+cushion_shell__neck_pillow,Neck Pillow,shell,206,181,206,181
+cushion_shell__neck_pillow_foam_core,Neck Pillow Foam Core,shell,206,184,206,184
+cushion_shell__office_chair_cushion,Office Chair Cushion,shell,206,160,206,160
+cushion_shell__orthotic_padding,Orthotic Padding,shell,206,159,206,159
+cushion_shell__pet_bed,Pet Bed,shell,206,206,206,206
+cushion_shell__pillow,Pillow,shell,206,193,206,193
+cushion_shell__positioning_cushion,Positioning Cushion,shell,206,183,206,183
+cushion_shell__protective_foam_padding,Protective Foam Padding,shell,206,176,206,176
+cushion_shell__shoulder_padding_foam,Shoulder Padding Foam,shell,206,204,206,204
+cushion_shell__silicone_cushion,Silicone Cushion,shell,206,161,206,161
+cushion_shell__sofa_armrest_padding,Sofa Armrest Padding,shell,206,196,206,196
+cushion_shell__sofa_back_cushion,Sofa Back Cushion,shell,206,195,206,195
+cushion_shell__sofa_cushion,Sofa Cushion,shell,206,192,206,192
+cushion_shell__soft_a,Soft A,shell,206,206,206,206
+foam_solid__acoustic_foam,Acoustic Foam,solid,206,145,206,145
+foam_solid__backrest_foam_core,Backrest Foam Core,solid,206,181,206,181
+foam_solid__bath_sponge,Bath Sponge,solid,206,129,206,129
+foam_solid__buoyancy_foam_block,Buoyancy Foam Block,solid,206,125,205,125
+foam_solid__cleaning_sponge,Cleaning Sponge,solid,207,118,207,118
+foam_solid__egg_crate_acoustic_foam,Egg-crate Acoustic Foam,solid,206,130,206,130
+foam_solid__foam_ball,Foam Ball,solid,207,164,207,164
+foam_solid__foam_block,Foam Block,solid,207,91,206,91
+foam_solid__foam_brick,Foam Brick,solid,206,70,206,70
+foam_solid__foam_clay,Foam Clay,solid,206,105,205,105
+foam_solid__foam_corner_protector,Foam Corner Protector,solid,206,84,205,84
+foam_solid__foam_cylinder,Foam Cylinder,solid,206,132,206,132
+foam_solid__foam_earplug,Foam Earplug,solid,206,59,206,59
+foam_solid__foam_insert,Foam Insert,solid,207,137,206,137
+foam_solid__foam_pipe_insulation,Foam Pipe Insulation,solid,207,144,207,144
+foam_solid__foam_roller,Foam Roller,solid,206,153,206,153
+foam_solid__foam_stress_cube,Foam Stress Cube,solid,206,115,206,115
+foam_solid__foam_wedge,Foam Wedge,solid,206,101,206,101
+foam_solid__headrest_foam_core,Headrest Foam Core,solid,206,198,206,198
+foam_solid__helmet_foam_liner,Helmet Foam Liner,solid,206,206,206,206
+foam_solid__insulation_foam,Insulation Foam,solid,206,137,206,137
+foam_solid__kitchen_sponge,Kitchen Sponge,solid,207,106,207,106
+foam_solid__makeup_sponge,Makeup Sponge,solid,206,125,206,125
+foam_solid__melamine_foam_eraser,Melamine Foam Eraser,solid,206,54,204,54
+foam_solid__microphone_foam_cover,Microphone Foam Cover,solid,206,206,206,206
+foam_solid__pyramid_acoustic_foam,Pyramid Acoustic Foam,solid,206,110,206,110
+foam_solid__scrub_sponge,Scrub Sponge,solid,206,109,206,109
+foam_solid__slow_rise_foam_toy,Slow-rise Foam Toy,solid,206,146,206,146
+foam_solid__sponge_paint_roller,Sponge Paint Roller,solid,206,138,206,138
+foam_solid__surgical_sponge,Surgical Sponge,solid,206,132,206,132
+foam_solid__wedge_acoustic_foam,Wedge Acoustic Foam,solid,207,131,207,131
+generic_deformable_solid__bean_filled_toy,Bean-filled Toy,solid,206,166,205,166
+generic_deformable_solid__beanbag_toy,Beanbag Toy,solid,207,205,207,205
+generic_deformable_solid__clay_block,Clay Block,solid,206,31,206,31
+generic_deformable_solid__conveyor_belt_segment,Conveyor Belt Segment,solid,207,131,205,131
+generic_deformable_solid__finger_puppet,Finger Puppet,solid,206,205,200,200
+generic_deformable_solid__flexible_pipe,Flexible Pipe,solid,206,165,206,165
+generic_deformable_solid__flexible_ruler_toy,Flexible Ruler Toy,solid,206,140,205,140
+generic_deformable_solid__hand_puppet,Hand Puppet,solid,206,205,205,205
+generic_deformable_solid__heat_therapy_gel_pack,Heat Therapy Gel Pack,solid,207,163,206,163
+generic_deformable_solid__kickboard,Kickboard,solid,206,97,205,97
+generic_deformable_solid__medical_tubing,Medical Tubing,solid,207,206,204,203
+generic_deformable_solid__oxygen_mask_soft_seal,Oxygen Mask Soft Seal,solid,206,194,206,194
+generic_deformable_solid__play_dough,Play Dough,solid,206,138,204,138
+generic_deformable_solid__pool_noodle,Pool Noodle,solid,207,157,207,157
+generic_deformable_solid__putty_slime,Putty Slime,solid,207,134,207,134
+generic_deformable_solid__rag_doll,Rag Doll,solid,206,203,203,203
+generic_deformable_solid__slime,Slime,solid,206,189,206,189
+generic_deformable_solid__soft_ball,Soft Ball,solid,206,157,206,157
+generic_deformable_solid__soft_doll,Soft Doll,solid,207,202,206,202
+generic_deformable_solid__soft_play_ball,Soft Play Ball,solid,206,186,206,186
+generic_deformable_solid__soft_tissue_training_block,Soft Tissue Training Block,solid,206,157,206,157
+generic_deformable_solid__squishy_toy,Squishy Toy,solid,206,156,206,156
+generic_deformable_solid__stress_ball,Stress Ball,solid,206,131,206,131
+generic_deformable_solid__stress_cube,Stress Cube,solid,206,103,206,103
+generic_deformable_solid__stuffed_animal,Stuffed Animal,solid,206,194,203,194
+generic_deformable_solid__tissue_phantom,Tissue Phantom,solid,206,175,205,175
+generic_deformable_solid__tourniquet,Tourniquet,solid,207,131,207,131
+generic_deformable_solid__ultrasound_phantom,Ultrasound Phantom,solid,207,191,207,191
+hand_foot_garment__latex_glove,Latex Glove,garment,206,206,206,206
+hand_foot_garment__medical_glove,Medical Glove,garment,206,206,206,206
+handled_soft_bag__backpack_fabric_body,Backpack Fabric Body,bag,206,205,205,205
+handled_soft_bag__backpack_hip_belt,Backpack Hip Belt,bag,206,206,206,206
+handled_soft_bag__backpack_shoulder_strap,Backpack Shoulder Strap,bag,206,206,206,206
+handled_soft_bag__canvas_shopping_bag,Canvas Shopping Bag,bag,206,206,206,206
+handled_soft_bag__foldable_shopping_bag,Foldable Shopping Bag,bag,206,206,206,206
+handled_soft_bag__laundry_bag,Laundry Bag,bag,206,206,206,206
+handled_soft_bag__tote_bag,Tote Bag,bag,206,206,206,206
+head_neck_garment__beanie,Beanie,garment,207,206,207,206
+head_neck_garment__bucket_hat,Bucket Hat,garment,207,207,207,207
+head_neck_garment__cap,Cap,garment,206,206,206,206
+head_neck_garment__hat,Hat,garment,207,207,207,207
+head_neck_garment__headscarf,Headscarf,garment,206,206,206,206
+head_neck_garment__peaked_cap,Peaked Cap,garment,207,207,207,207
+head_neck_garment__scarf,Scarf,garment,206,205,206,205
+inflatable_shell__air_pillow,Air Pillow,shell,206,206,206,206
+inflatable_shell__inflatable_animal_toy,Inflatable Animal Toy,shell,206,206,206,206
+inflatable_shell__inflatable_ball,Inflatable Ball,shell,206,206,206,206
+inflatable_shell__inflatable_bladder,Inflatable Bladder,shell,207,207,207,207
+inflatable_shell__inflatable_cushion,Inflatable Cushion,shell,206,206,206,206
+inflatable_shell__inflatable_mattress,Inflatable Mattress,shell,207,187,207,187
+long_strip_textile__bubble_wrap,Bubble Wrap,cloth_sheet,206,206,205,205
+long_strip_textile__compression_wrap,Compression Wrap,cloth_sheet,206,206,202,202
+long_strip_textile__elastic_bandage,Elastic Bandage,cloth_sheet,206,206,203,203
+long_strip_textile__sandwich_wrap,Sandwich Wrap,cloth_sheet,206,204,186,184
+long_strip_textile__table_runner,Table Runner,cloth_sheet,206,206,205,205
+lower_garment__a_line_skirt,A-line Skirt,garment,206,203,206,203
+lower_garment__athletic_shorts,Athletic Shorts,garment,206,185,206,185
+lower_garment__bed_skirt,Bed Skirt,garment,206,206,206,206
+lower_garment__cargo_pants,Cargo Pants,garment,206,205,206,205
+lower_garment__casual_pants,Casual Pants,garment,206,203,206,203
+lower_garment__dress_pants,Dress Pants,garment,206,204,206,204
+lower_garment__midi_skirt,Midi Skirt,garment,206,205,206,205
+lower_garment__pajama_pants,Pajama Pants,garment,206,206,206,206
+lower_garment__pleated_skirt,Pleated Skirt,garment,206,202,206,202
+lower_garment__shorts,Shorts,garment,206,192,206,192
+lower_garment__skirt,Skirt,garment,206,202,206,202
+lower_garment__wide_leg_pants,Wide-leg Pants,garment,206,201,206,201
+lower_garment__yoga_pants,Yoga Pants,garment,206,203,206,203
+one_piece_garment__dress,Dress,garment,206,203,206,203
+one_piece_garment__dress_shirt,Dress Shirt,garment,206,205,206,205
+one_piece_garment__gown,Gown,garment,206,205,206,205
+one_piece_garment__maxi_dress,Maxi Dress,garment,206,206,206,206
+one_piece_garment__slip_dress,Slip Dress,garment,206,206,206,206
+padded_support__ankle_support_cushion,Ankle Support Cushion,shell,206,187,206,187
+padded_support__camping_chair_fabric_seat,Camping Chair Fabric Seat,shell,206,206,206,206
+padded_support__car_seat_cushion,Car Seat Cushion,shell,206,198,206,198
+padded_support__crib_bumper_pad,Crib Bumper Pad,shell,206,179,206,179
+padded_support__elbow_support_cushion,Elbow Support Cushion,shell,206,194,206,194
+padded_support__folding_chair_fabric_seat,Folding Chair Fabric Seat,shell,206,206,206,206
+padded_support__garden_kneeler_pad,Garden Kneeler Pad,shell,206,136,206,136
+padded_support__headphone_ear_pad_foam,Headphone Ear Pad Foam,shell,206,165,206,165
+padded_support__iv_injection_training_pad,IV Injection Training Pad,shell,206,159,206,159
+padded_support__knee_pad_foam_insert,Knee Pad Foam Insert,shell,206,192,206,192
+padded_support__knee_support_cushion,Knee Support Cushion,shell,206,194,206,194
+padded_support__kneeling_pad,Kneeling Pad,shell,207,167,207,167
+padded_support__mattress_corner,Mattress Corner,shell,206,202,206,202
+padded_support__mattress_edge,Mattress Edge,shell,206,203,206,203
+padded_support__mattress_protector,Mattress Protector,shell,207,198,207,198
+padded_support__medical_gel_pad,Medical Gel Pad,shell,206,191,206,191
+padded_support__medical_silicone_pad,Medical Silicone Pad,shell,206,145,206,145
+padded_support__medical_support_strap,Medical Support Strap,shell,206,206,206,206
+padded_support__memory_foam_pad,Memory Foam Pad,shell,207,134,207,134
+padded_support__neoprene_pad,Neoprene Pad,shell,206,154,206,154
+padded_support__posture_support_cushion,Posture Support Cushion,shell,206,194,206,194
+padded_support__seat_belt_webbing,Seat Belt Webbing,shell,206,199,206,199
+padded_support__seat_cushion_cover,Seat Cushion Cover,shell,206,206,206,206
+padded_support__steam_mop_pad,Steam Mop Pad,shell,206,141,206,141
+padded_support__suture_practice_pad,Suture Practice Pad,shell,206,145,206,145
+plush_soft_solid__plush_toy,Plush Toy,solid,207,205,206,205
+rectangular_textile__agricultural_fabric_sheet,Agricultural Fabric Sheet,cloth_sheet,206,206,206,206
+rectangular_textile__armrest_cover,Armrest Cover,cloth_sheet,206,206,204,204
+rectangular_textile__artificial_skin_patch,Artificial Skin Patch,cloth_sheet,206,206,200,200
+rectangular_textile__awning_fabric,Awning Fabric,cloth_sheet,206,206,205,205
+rectangular_textile__baby_bib,Baby Bib,cloth_sheet,206,205,187,187
+rectangular_textile__bath_mat,Bath Mat,cloth_sheet,206,206,202,202
+rectangular_textile__bedsheet,Bedsheet,cloth_sheet,206,206,206,206
+rectangular_textile__bedspread,Bedspread,cloth_sheet,206,206,205,205
+rectangular_textile__blackout_curtain,Blackout Curtain,cloth_sheet,206,204,206,204
+rectangular_textile__blanket,Blanket,cloth_sheet,206,206,206,206
+rectangular_textile__canopy_fabric,Canopy Fabric,cloth_sheet,206,206,205,205
+rectangular_textile__cargo_tie_down_strap,Cargo Tie-down Strap,cloth_sheet,207,207,203,203
+rectangular_textile__chair_cover,Chair Cover,cloth_sheet,206,206,205,205
+rectangular_textile__cleaning_cloth,Cleaning Cloth,cloth_sheet,206,206,203,203
+rectangular_textile__curtain,Curtain,cloth_sheet,207,205,207,205
+rectangular_textile__dish_cloth,Dish Cloth,cloth_sheet,206,205,202,201
+rectangular_textile__door_curtain,Door Curtain,cloth_sheet,207,205,207,205
+rectangular_textile__doormat,Doormat,cloth_sheet,206,206,206,206
+rectangular_textile__dust_cover,Dust Cover,cloth_sheet,206,206,206,206
+rectangular_textile__duvet_cover,Duvet Cover,cloth_sheet,206,206,205,205
+rectangular_textile__elastic_band_fabric,Elastic Band Fabric,cloth_sheet,206,206,203,203
+rectangular_textile__eva_floor_mat,EVA Floor Mat,cloth_sheet,206,206,204,204
+rectangular_textile__eva_foam_sheet,EVA Foam Sheet,cloth_sheet,207,207,200,200
+rectangular_textile__fabric_book,Fabric Book,cloth_sheet,206,203,189,188
+rectangular_textile__fabric_coaster,Fabric Coaster,cloth_sheet,206,206,206,206
+rectangular_textile__fabric_dust_cover,Fabric Dust Cover,cloth_sheet,206,205,206,205
+rectangular_textile__fabric_sand_container,Fabric Sand Container,cloth_sheet,206,204,205,203
+rectangular_textile__fabric_strap,Fabric Strap,cloth_sheet,206,206,202,202
+rectangular_textile__fitted_sheet,Fitted Sheet,cloth_sheet,206,206,206,206
+rectangular_textile__flexible_insulation_sheet,Flexible Insulation Sheet,cloth_sheet,206,206,202,202
+rectangular_textile__floor_mat,Floor Mat,cloth_sheet,206,206,206,206
+rectangular_textile__foam_puzzle_mat,Foam Puzzle Mat,cloth_sheet,206,205,202,201
+rectangular_textile__foil_sheet,Foil Sheet,cloth_sheet,206,205,201,200
+rectangular_textile__folding_sleeping_mat,Folding Sleeping Mat,cloth_sheet,207,207,207,207
+rectangular_textile__hammock_fabric,Hammock Fabric,cloth_sheet,206,205,206,205
+rectangular_textile__interlocking_foam_mat,Interlocking Foam Mat,cloth_sheet,206,206,200,200
+rectangular_textile__ironing_board_cover,Ironing Board Cover,cloth_sheet,206,206,206,206
+rectangular_textile__kitchen_mat,Kitchen Mat,cloth_sheet,206,205,204,203
+rectangular_textile__kite_fabric,Kite Fabric,cloth_sheet,206,206,205,205
+rectangular_textile__laundry_basket_liner,Laundry Basket Liner,cloth_sheet,206,206,204,204
+rectangular_textile__lifting_sling,Lifting Sling,cloth_sheet,206,206,206,206
+rectangular_textile__luggage_strap,Luggage Strap,cloth_sheet,206,206,202,202
+rectangular_textile__mop_cloth,Mop Cloth,cloth_sheet,206,206,203,203
+rectangular_textile__napkin,Napkin,cloth_sheet,206,206,201,201
+rectangular_textile__parachute_canopy,Parachute Canopy,cloth_sheet,206,206,206,206
+rectangular_textile__pet_bed_cover,Pet Bed Cover,cloth_sheet,206,205,205,204
+rectangular_textile__pet_blanket,Pet Blanket,cloth_sheet,206,206,206,206
+rectangular_textile__pillowcase,Pillowcase,cloth_sheet,206,205,206,205
+rectangular_textile__placemat,Placemat,cloth_sheet,206,206,199,199
+rectangular_textile__play_mat,Play Mat,cloth_sheet,207,207,207,207
+rectangular_textile__quilt,Quilt,cloth_sheet,206,204,206,204
+rectangular_textile__reflective_webbing,Reflective Webbing,cloth_sheet,206,206,204,204
+rectangular_textile__roller_blind_fabric,Roller Blind Fabric,cloth_sheet,206,206,206,206
+rectangular_textile__rubber_mat,Rubber Mat,cloth_sheet,206,206,205,205
+rectangular_textile__rubber_sheet,Rubber Sheet,cloth_sheet,207,205,204,202
+rectangular_textile__rug,Rug,cloth_sheet,207,207,207,207
+rectangular_textile__sheer_curtain,Sheer Curtain,cloth_sheet,206,206,205,205
+rectangular_textile__sofa_cover,Sofa Cover,cloth_sheet,206,206,206,206
+rectangular_textile__sofa_throw,Sofa Throw,cloth_sheet,206,206,205,205
+rectangular_textile__sports_brace_strap,Sports Brace Strap,cloth_sheet,206,206,191,191
+rectangular_textile__stroller_canopy_fabric,Stroller Canopy Fabric,cloth_sheet,206,206,205,205
+rectangular_textile__sunshade_fabric,Sunshade Fabric,cloth_sheet,206,206,205,205
+rectangular_textile__swaddle_blanket,Swaddle Blanket,cloth_sheet,207,206,207,206
+rectangular_textile__tablecloth,Tablecloth,cloth_sheet,206,206,206,206
+rectangular_textile__tatami_mat_cover,Tatami Mat Cover,cloth_sheet,206,206,206,206
+rectangular_textile__tent_fabric,Tent Fabric,cloth_sheet,206,206,206,206
+rectangular_textile__tent_footprint,Tent Footprint,cloth_sheet,206,205,206,205
+rectangular_textile__tent_inner_fabric,Tent Inner Fabric,cloth_sheet,207,207,206,206
+rectangular_textile__throw_blanket,Throw Blanket,cloth_sheet,206,206,205,205
+rectangular_textile__velcro_strap,Velcro Strap,cloth_sheet,206,206,193,193
+rectangular_textile__wet_cloth,Wet Cloth,cloth_sheet,206,206,204,204
+rectangular_textile__window_cleaning_cloth,Window Cleaning Cloth,cloth_sheet,207,206,197,196
+rectangular_textile__yoga_mat,Yoga Mat,cloth_sheet,206,201,193,191
+rubber_soft_solid__prosthetic_silicone_liner,Prosthetic Silicone Liner,solid,207,207,207,207
+rubber_soft_solid__protective_rubber_cover,Protective Rubber Cover,solid,206,206,206,206
+rubber_soft_solid__rubber_diaphragm,Rubber Diaphragm,solid,206,151,204,151
+rubber_soft_solid__rubber_gasket,Rubber Gasket,solid,206,117,206,117
+rubber_soft_solid__rubber_seal,Rubber Seal,solid,206,102,204,102
+rubber_soft_solid__silicone_blood_vessel_model,Silicone Blood Vessel Model,solid,206,203,205,202
+rubber_soft_solid__silicone_fat_model,Silicone Fat Model,solid,206,170,206,170
+rubber_soft_solid__silicone_membrane,Silicone Membrane,solid,206,206,206,206
+rubber_soft_solid__silicone_muscle_model,Silicone Muscle Model,solid,207,198,206,198
+rubber_soft_solid__silicone_organ_model,Silicone Organ Model,solid,206,181,205,181
+rubber_soft_solid__silicone_teether_toy,Silicone Teether Toy,solid,207,149,207,149
+sack_soft_bag__bean_bag,Bean Bag,bag,207,204,207,204
+sack_soft_bag__bean_bag_toss_toy,Bean Bag Toss Toy,bag,206,202,206,202
+sack_soft_bag__drawstring_stuff_sack,Drawstring Stuff Sack,bag,206,158,206,158
+sack_soft_bag__sandbag,Sandbag,bag,206,197,206,197
+sack_soft_bag__soil_sack,Soil Sack,bag,207,198,207,198
+sack_soft_bag__straw_sack,Straw Sack,bag,207,180,207,180
+sealed_soft_package__agricultural_plastic_film,Agricultural Plastic Film,bag,206,203,206,203
+sealed_soft_package__air_pillow_packaging,Air Pillow Packaging,bag,206,206,206,206
+sealed_soft_package__aluminum_foil_roll,Aluminum Foil Roll,bag,207,200,206,200
+sealed_soft_package__anti_static_bag,Anti-static Bag,bag,207,203,207,203
+sealed_soft_package__blood_bag,Blood Bag,bag,206,204,206,204
+sealed_soft_package__body_wash_refill_pouch,Body Wash Refill Pouch,bag,206,206,206,206
+sealed_soft_package__bubble_mailer,Bubble Mailer,bag,206,206,206,206
+sealed_soft_package__camera_insert_pouch,Camera Insert Pouch,bag,207,204,207,204
+sealed_soft_package__cling_film,Cling Film,bag,206,202,206,202
+sealed_soft_package__compost_bag,Compost Bag,bag,206,206,206,206
+sealed_soft_package__conditioner_refill_pouch,Conditioner Refill Pouch,bag,206,205,206,205
+sealed_soft_package__cosmetic_refill_pouch,Cosmetic Refill Pouch,bag,206,202,206,202
+sealed_soft_package__detergent_refill_bag,Detergent Refill Bag,bag,206,206,206,206
+sealed_soft_package__drainage_bag,Drainage Bag,bag,206,204,206,204
+sealed_soft_package__dry_bag,Dry Bag,bag,206,204,204,204
+sealed_soft_package__electronics_organizer_pouch,Electronics Organizer Pouch,bag,206,203,206,203
+sealed_soft_package__fabric_storage_bag,Fabric Storage Bag,bag,206,206,206,206
+sealed_soft_package__fishing_net_bundle,Fishing Net Bundle,bag,206,204,206,204
+sealed_soft_package__flexible_blister_pack,Flexible Blister Pack,bag,206,199,205,199
+sealed_soft_package__flour_bag,Flour Bag,bag,207,174,207,174
+sealed_soft_package__foam_packaging_insert,Foam Packaging Insert,bag,206,95,205,95
+sealed_soft_package__foam_packaging_tray,Foam Packaging Tray,bag,206,118,206,118
+sealed_soft_package__garment_bag,Garment Bag,bag,206,206,206,206
+sealed_soft_package__hot_air_balloon_envelope,Hot Air Balloon Envelope,bag,206,205,206,205
+sealed_soft_package__ice_slush,Ice Slush,bag,206,201,206,201
+sealed_soft_package__iv_fluid_bag,IV Fluid Bag,bag,206,199,206,199
+sealed_soft_package__mask_pouch,Mask Pouch,bag,206,206,206,206
+sealed_soft_package__milk_pouch,Milk Pouch,bag,206,206,206,206
+sealed_soft_package__mud_lump,Mud Lump,bag,207,108,207,108
+sealed_soft_package__paper_bag,Paper Bag,bag,206,198,198,198
+sealed_soft_package__paper_envelope,Paper Envelope,bag,206,201,204,201
+sealed_soft_package__plastic_bag,Plastic Bag,bag,206,204,206,204
+sealed_soft_package__poly_mailer,Poly Mailer,bag,206,204,206,204
+sealed_soft_package__potato_chip_bag,Potato Chip Bag,bag,206,202,205,202
+sealed_soft_package__quilt_compression_bag,Quilt Compression Bag,bag,206,205,206,205
+sealed_soft_package__ready_meal_pouch,Ready Meal Pouch,bag,206,205,206,205
+sealed_soft_package__rice_bag,Rice Bag,bag,206,206,206,206
+sealed_soft_package__sanitary_pad_wrapper,Sanitary Pad Wrapper,bag,206,199,206,199
+sealed_soft_package__sauce_pouch,Sauce Pouch,bag,206,205,206,205
+sealed_soft_package__shade_net,Shade Net,bag,206,204,206,204
+sealed_soft_package__shampoo_refill_pouch,Shampoo Refill Pouch,bag,206,203,206,203
+sealed_soft_package__shipping_envelope,Shipping Envelope,bag,206,202,204,202
+sealed_soft_package__sleeping_bag,Sleeping Bag,bag,206,183,206,183
+sealed_soft_package__snack_pouch,Snack Pouch,bag,206,197,206,197
+sealed_soft_package__snow_pile,Snow Pile,bag,206,126,206,126
+sealed_soft_package__soft_tissue_pack,Soft Tissue Pack,bag,206,105,206,105
+sealed_soft_package__soft_tool_pouch,Soft Tool Pouch,bag,206,206,206,206
+sealed_soft_package__spouted_drink_pouch,Spouted Drink Pouch,bag,206,206,206,206
+sealed_soft_package__spouted_puree_pouch,Spouted Puree Pouch,bag,206,206,206,206
+sealed_soft_package__toiletry_pouch,Toiletry Pouch,bag,207,207,207,207
+sealed_soft_package__urine_bag,Urine Bag,bag,206,202,206,202
+sealed_soft_package__vacuum_sealed_food_pack,Vacuum-sealed Food Pack,bag,206,69,205,69
+sealed_soft_package__waterproof_document_pouch,Waterproof Document Pouch,bag,206,203,206,203
+sealed_soft_package__wet_sponge,Wet Sponge,bag,206,199,206,199
+sealed_soft_package__wet_wipes_pack,Wet Wipes Pack,bag,206,201,206,201
+sealed_soft_package__wrapping_paper,Wrapping Paper,bag,206,196,201,196
+sealed_soft_package__zip_lock_bag,Zip-lock Bag,bag,206,206,206,206
+soft_case__clear_document_sleeve,Clear Document Sleeve,bag,207,207,207,207
+soft_food_form__butter,Butter,solid,206,39,206,39
+soft_food_form__buttercream,Buttercream,solid,206,154,206,154
+soft_food_form__cheese,Cheese,solid,206,77,206,77
+soft_food_form__chocolate_mousse,Chocolate Mousse,solid,206,149,206,149
+soft_food_form__custard,Custard,solid,206,132,206,132
+soft_food_form__fish_cake,Fish Cake,solid,207,101,207,101
+soft_food_form__gelatin_cube,Gelatin Cube,solid,206,72,206,72
+soft_food_form__glutinous_rice_ball,Glutinous Rice Ball,solid,206,110,206,110
+soft_food_form__gummy_candy,Gummy Candy,solid,206,3,199,3
+soft_food_form__jelly,Jelly,solid,206,118,206,118
+soft_food_form__marshmallow,Marshmallow,solid,206,61,206,61
+soft_food_form__mashed_potato,Mashed Potato,solid,206,184,206,184
+soft_food_form__mashed_pumpkin,Mashed Pumpkin,solid,206,183,206,183
+soft_food_form__meat_jelly,Meat Jelly,solid,206,85,206,85
+soft_food_form__mochi,Mochi,solid,207,60,207,60
+soft_food_form__nama_chocolate,Nama Chocolate,solid,206,9,203,9
+soft_food_form__nougat,Nougat,solid,206,17,206,17
+soft_food_form__panna_cotta,Panna Cotta,solid,206,106,205,106
+soft_food_form__peanut_butter_slab,Peanut Butter Slab,solid,206,69,206,69
+soft_food_form__pudding,Pudding,solid,206,112,206,112
+soft_food_form__red_bean_paste_ball,Red Bean Paste Ball,solid,206,100,206,100
+soft_food_form__rice_ball,Rice Ball,solid,206,143,206,143
+soft_food_form__rice_cake,Rice Cake,solid,206,91,206,91
+soft_food_form__soft_chocolate_bar,Soft Chocolate Bar,solid,206,11,205,11
+soft_food_form__sushi_rice_ball,Sushi Rice Ball,solid,206,114,206,114
+soft_food_form__taro_paste_block,Taro Paste Block,solid,206,49,206,49
+soft_food_form__toffee,Toffee,solid,207,10,201,10
+soft_food_form__tofu,Tofu,solid,206,84,206,84
+soft_food_form__zongzi,Zongzi,solid,206,139,206,139
+terry_textile__baby_bath_towel,Baby Bath Towel,cloth_sheet,206,206,206,206
+terry_textile__bath_towel,Bath Towel,cloth_sheet,206,206,206,206
+terry_textile__beach_towel,Beach Towel,cloth_sheet,207,207,206,206
+terry_textile__car_cleaning_towel,Car Cleaning Towel,cloth_sheet,206,205,201,200
+terry_textile__face_towel,Face Towel,cloth_sheet,206,206,205,205
+terry_textile__hand_towel,Hand Towel,cloth_sheet,207,207,205,205
+terry_textile__tea_towel,Tea Towel,cloth_sheet,206,206,204,204
+terry_textile__towel,Towel,cloth_sheet,206,206,206,206
+terry_textile__washcloth,Washcloth,cloth_sheet,206,205,186,185
+upper_garment__ankle_socks,Ankle Socks,garment,206,206,206,206
+upper_garment__apron,Apron,garment,206,204,206,204
+upper_garment__bathrobe,Bathrobe,garment,206,188,206,188
+upper_garment__blazer,Blazer,garment,206,193,206,193
+upper_garment__blouse,Blouse,garment,206,199,206,199
+upper_garment__bomber_jacket,Bomber Jacket,garment,206,206,206,206
+upper_garment__bra,Bra,garment,206,206,206,206
+upper_garment__camisole,Camisole,garment,207,207,207,207
+upper_garment__cardigan,Cardigan,garment,206,205,206,205
+upper_garment__chef_coat,Chef Coat,garment,206,182,206,182
+upper_garment__chiffon_blouse,Chiffon Blouse,garment,206,203,206,203
+upper_garment__denim_jacket,Denim Jacket,garment,207,206,207,206
+upper_garment__denim_shirt,Denim Shirt,garment,206,206,206,206
+upper_garment__down_jacket,Down Jacket,garment,206,206,206,206
+upper_garment__down_vest,Down Vest,garment,206,205,206,205
+upper_garment__flannel_shirt,Flannel Shirt,garment,206,205,206,205
+upper_garment__gloves,Gloves,garment,206,206,206,206
+upper_garment__hoodie,Hoodie,garment,206,206,206,206
+upper_garment__jacket,Jacket,garment,206,197,206,197
+upper_garment__jeans,Jeans,garment,207,203,207,203
+upper_garment__joggers,Joggers,garment,207,204,207,204
+upper_garment__knitted_gloves,Knitted Gloves,garment,206,204,206,204
+upper_garment__knitted_vest,Knitted Vest,garment,206,206,206,206
+upper_garment__knitwear,Knitwear,garment,206,203,206,203
+upper_garment__lab_coat,Lab Coat,garment,206,190,206,190
+upper_garment__leather_jacket,Leather Jacket,garment,207,207,207,207
+upper_garment__leggings,Leggings,garment,206,206,206,206
+upper_garment__life_jacket_foam_insert,Life Jacket Foam Insert,garment,206,206,206,206
+upper_garment__long_sleeve_t_shirt,Long-sleeve T-shirt,garment,206,206,206,206
+upper_garment__long_socks,Long Socks,garment,206,206,206,206
+upper_garment__nurse_uniform,Nurse Uniform,garment,206,199,206,199
+upper_garment__overcoat,Overcoat,garment,206,197,206,197
+upper_garment__padded_jacket,Padded Jacket,garment,206,206,206,206
+upper_garment__pajamas,Pajamas,garment,207,196,207,196
+upper_garment__parka,Parka,garment,206,200,206,200
+upper_garment__polo_shirt,Polo Shirt,garment,207,200,207,200
+upper_garment__poncho,Poncho,garment,206,206,206,206
+upper_garment__raincoat,Raincoat,garment,207,191,207,191
+upper_garment__reflective_vest,Reflective Vest,garment,206,206,206,206
+upper_garment__robe,Robe,garment,207,197,207,197
+upper_garment__school_uniform,School Uniform,garment,206,199,206,199
+upper_garment__shawl,Shawl,garment,206,205,206,205
+upper_garment__shell_jacket,Shell Jacket,garment,206,197,206,197
+upper_garment__shirt,Shirt,garment,206,204,206,204
+upper_garment__ski_jacket,Ski Jacket,garment,206,204,206,204
+upper_garment__socks,Socks,garment,207,207,207,207
+upper_garment__sports_bra,Sports Bra,garment,207,207,207,207
+upper_garment__stockings,Stockings,garment,206,205,206,205
+upper_garment__sun_protective_jacket,Sun-protective Jacket,garment,206,205,206,205
+upper_garment__sweater,Sweater,garment,206,204,206,204
+upper_garment__sweatpants,Sweatpants,garment,207,206,207,206
+upper_garment__sweatshirt,Sweatshirt,garment,207,204,207,204
+upper_garment__swim_trunks,Swim Trunks,garment,207,202,207,202
+upper_garment__swimsuit,Swimsuit,garment,206,206,206,206
+upper_garment__t_shirt,T-shirt,garment,206,195,206,195
+upper_garment__tank_top,Tank Top,garment,207,207,207,207
+upper_garment__tights,Tights,garment,206,204,206,204
+upper_garment__touchscreen_gloves,Touchscreen Gloves,garment,206,206,206,206
+upper_garment__track_jacket,Track Jacket,garment,206,205,206,205
+upper_garment__trench_coat,Trench Coat,garment,206,194,206,194
+upper_garment__turtleneck_sweater,Turtleneck Sweater,garment,207,203,207,203
+upper_garment__underwear,Underwear,garment,206,204,206,204
+upper_garment__vest,Vest,garment,206,206,206,206
+upper_garment__wetsuit,Wetsuit,garment,207,204,207,204
+upper_garment__wool_coat,Wool Coat,garment,207,189,207,189
+upper_garment__workwear,Workwear,garment,206,204,206,204
+upper_garment__zip_up_hoodie,Zip-up Hoodie,garment,206,206,206,206

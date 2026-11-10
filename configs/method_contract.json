@@ -1,0 +1,138 @@
+{
+  "schema_name": "softsim.method_contract",
+  "schema_version": 1,
+  "method_id": "softsim.genesis_proxy.v12.1",
+  "phase": "frozen_production_contract_20260917",
+  "frozen_at": "2026-09-17",
+  "reference_method": "stage3_showcase_150_genesis_mpm_20260724",
+  "genesis_version": "1.3.3",
+  "reference_genesis_version": "1.3.3",
+  "solver": {
+    "solid": "MPM.Elastic/MPM.ElastoPlastic",
+    "volume": "MPM.Elastic/MPM.ElastoPlastic",
+    "cloth": "PBD.Cloth",
+    "coupler": "LegacyCoupler",
+    "ipc_used": false,
+    "uipc_used": false,
+    "proxy_mode": "genesis_proxy",
+    "method_name": "Genesis 1.3.3 proxy; simulator-grounded behavior verification"
+  },
+  "runner_contract": {
+    "drop_runner_env": "GENESIS_MPM_DROP_RUNNER",
+    "generic_behavior_runner_env": "SOFTSIM_GENESIS_BEHAVIOR_RUNNER",
+    "non_drop_probe_requires_generic_runner": true,
+    "required_report_fields": [
+      "behavior_pass",
+      "metrics",
+      "diagnosis"
+    ]
+  },
+  "fixed_task_numerics": [
+    "particle_size_m",
+    "dt_s",
+    "substeps",
+    "grid_density",
+    "scale_m",
+    "seed",
+    "drop_height_m",
+    "proxy_mode"
+  ],
+  "fixed_task_numerics_pin": "pinned inside runtime archive scripts/genesis_probe.py; see runtime_archive_sha256",
+  "mutable_physical_parameters": [
+    "density_kg_m3",
+    "youngs_modulus_pa",
+    "poisson_ratio",
+    "thickness_m",
+    "bending_stiffness",
+    "friction_static",
+    "friction_kinetic",
+    "surface_density_kg_m2",
+    "stretch_compliance_m_n",
+    "bending_compliance_rad_n",
+    "volume_compliance_m3_n",
+    "air_resistance",
+    "von_mises_yield_stress_pa"
+  ],
+  "mesh_normalization_rule": "surface mesh is decimated or voxelized by Genesis preprocessor; normalized asset unit scaled by metric scale rule",
+  "scale_rule": "metric scale comes from VLM prior or family fallback; never claimed as measured ground truth",
+  "probes": {
+    "calibration": {
+      "name": "drop_behavior",
+      "frames": 28,
+      "render": false,
+      "tolerance": 0.1
+    },
+    "heldout": {
+      "name": "compression_behavior",
+      "frames": 36,
+      "render": true,
+      "tolerance": 0.1
+    }
+  },
+  "calibration": {
+    "requires_real_stimulus": true,
+    "feedback_to_proposer": true,
+    "simulation_calibrated_means": "behavior contract pass only; not material ground truth"
+  },
+  "heldout": {
+    "requires_different_probe_id": true,
+    "requires_different_stimulus_action_config": true,
+    "feedback_to_proposer": false
+  },
+  "acceptance": {
+    "tolerance": 0.1,
+    "max_iterations": 3,
+    "update_gain": 0.5,
+    "timeout_seconds": 900
+  },
+  "render_policy": {
+    "calibration": false,
+    "heldout": true,
+    "frames_sampled": 8,
+    "resolution": [
+      320,
+      320
+    ]
+  },
+  "status_vocabulary": [
+    "accepted_first_pass",
+    "corrected_then_accepted",
+    "rejected_model_limit",
+    "rejected_numerical_failure",
+    "uncertain_human_escalation"
+  ],
+  "formal_status_vocabulary": [
+    "verified",
+    "rejected",
+    "task_failure"
+  ],
+  "production_run_evidence": {
+    "run_tag": "production_v12",
+    "terminal_counts": {
+      "verified": 45697,
+      "rejected": 54274,
+      "task_failure": 29
+    },
+    "agent_config_sha256": "sha256:a49f0a7ec5714697e107e8d0c229e00351416a05841af7948ed7b6b9dd8545c1",
+    "agent_run_plan_sha256": "sha256:2dce8e8e22bc601a694ccc84cc632001faa9aa3934c208fe55b44e3a599e6764",
+    "agent_catalog_snapshot_sha256": "sha256:a894766e8a459e9faec54ec0d5497ca4a58decc5facaf1d60dc5447afabc1fcf",
+    "agent_plan_summary_sha256": "sha256:36c735c76035bbd3f1c6d0e8ee7f7ee263b18cf08dc3674e3036497ac38c46a5",
+    "prior_plan_sha256": "sha256:bbcaaca7df290b8b1d79ba18b28e49f67c8b3c8d57ceac216280c9ad9b06e9b7",
+    "runtime_archive_sha256": "8a97875bfbb5970ffb3e6c4ee1c2b7325f09c312db52428426327f2f887cb075",
+    "asset_ledger_v1_sha256": "81b01868c4281ce78c6b767476464270e4e221d0fe03da906bf4ddf82bf9187d",
+    "proposer_transport": "qwen (qwen3.8-max, DashScope-compatible endpoint)",
+    "source_batch_evidence": "p01_inventory_sha256 pinned by hash; batch reports archived outside the release content"
+  },
+  "claim_boundary": "simulator-grounded behavior contract; not measured material ground truth",
+  "simulation_calibrated_definition": "frozen probe behavior contract passed",
+  "ipc_used": false,
+  "uipc_used": false,
+  "external_baselines": {
+    "status": "disabled",
+    "reason": "checkpoint/data/hash unavailable"
+  },
+  "change_log": [
+    "2026-09-17: frozen from local Stage-I snapshot; enriched with production probe/acceptance/render parameters and run evidence hashes from the production catalog snapshot and runtime archive; method_id kept at v12.1 because the aggregate status-mapping fix changes release aggregation semantics, not the executed solver/probe method; the rebuilt VLM-in-the-loop agent (configs/agent_genesis_qwen_command.json) is reserved for method_id softsim.genesis_proxy.v12.2 and must not be conflated with this contract.",
+    "2026-09-18: removed literal OSS batch-input path from production_run_evidence (formal reader forbids such references in release content); evidence remains pinned by sha256."
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schema_name": "softsim.method_contract",
+  "schema_version": 1,
+  "method_id": "softsim.genesis_proxy.v12.5-candidate",
+  "phase": "candidate_mesh_adaptation_v3_20260921",
+  "frozen_at": null,
+  "supersedes": "softsim.genesis_proxy.v12.2",
+  "reference_method": "stage3_showcase_150_genesis_mpm_20260724",
+  "genesis_version": "1.3.3",
+  "reference_genesis_version": "1.3.3",
+  "solver": {
+    "solid": "MPM.Elastic/MPM.ElastoPlastic",
+    "volume": "MPM.Elastic/MPM.ElastoPlastic",
+    "cloth": "PBD.Cloth",
+    "coupler": "LegacyCoupler",
+    "ipc_used": false,
+    "uipc_used": false,
+    "proxy_mode": "genesis_proxy",
+    "method_name": "Genesis 1.3.3 proxy; simulator-grounded behavior verification",
+    "legacy_name_mapping": {
+      "genesis_fem_cloth_ipc": "PBD.Cloth",
+      "genesis_pbd_cloth": "PBD.Cloth",
+      "genesis_pbd_elastic": "PBD.Cloth",
+      "genesis_mpm_elastic": "MPM.Elastic",
+      "genesis_mpm_elastoplastic": "MPM.ElastoPlastic"
+    }
+  },
+  "runner_contract": {
+    "generic_behavior_runner_env": "SOFTSIM_GENESIS_BEHAVIOR_RUNNER",
+    "generic_behavior_runner": "code/scripts/genesis_behavior_runner.py",
+    "bridge": "code/scripts/genesis_probe.py",
+    "non_drop_probe_requires_generic_runner": true,
+    "required_report_fields": [
+      "behavior_pass",
+      "metrics",
+      "diagnosis"
+    ],
+    "exit_code_semantics": "0 = execution completed regardless of behavior_pass; non-zero only for genuine executor failure (behavior failure is never a numerical failure)"
+  },
+  "fixed_task_numerics": [
+    "particle_size_m",
+    "dt_s",
+    "substeps",
+    "grid_density",
+    "scale_m",
+    "seed",
+    "drop_height_m",
+    "proxy_mode"
+  ],
+  "sizing_rule": "per-asset frozen numerics derive from prior longest_dimension_m: scale_m=clamp(L,0.02,2.0), particle_size_m=scale/24 (MPM only), dt_s=0.001, substeps=16, grid_density=64, seed=17, drop_height_m=min(0.5*scale,0.25), proxy_mode=alpha-wrap; cloth routes treat particle_size_m/grid_density as not_applicable",
+  "mutable_physical_parameters": [
+    "density_kg_m3",
+    "youngs_modulus_pa",
+    "poisson_ratio",
+    "yield_stress_pa",
+    "yield_lower",
+    "yield_higher",
+    "plastic_viscosity_pa_s",
+    "tensile_cohesion_pa",
+    "friction_static",
+    "friction_dynamic"
+  ],
+  "mutable_parameter_bounds": "per-prior valid_range, falling back to routing.DEFAULT_PARAMETER_BOUNDS; proposers may introduce whitelisted parameters absent from the prior",
+  "proposers": {
+    "ruletune": "deterministic single-parameter bounded update (E2 baseline)",
+    "qwen": "VLM-in-the-loop via code/scripts/qwen_proposer_transport.py (qwen3.8-max, DashScope-compatible); whitelist-validated bounded patch; unavailable -> structured proposer_unavailable, never silent"
+  },
+  "probes": {
+    "calibration": {
+      "probe_id": "calibration.drop.corner_first.v1",
+      "stimulus": "drop",
+      "steps": 420,
+      "record_every": 4,
+      "seed_offset": 11,
+      "tolerance": 0.05,
+      "required_metrics": [
+        "contact_fraction",
+        "settled",
+        "deformation_ratio",
+        "finite_fraction"
+      ]
+    },
+    "heldout": {
+      "probe_id": "heldout.compression.lateral.v1",
+      "stimulus": "compression",
+      "steps": 560,
+      "record_every": 8,
+      "seed_offset": 97,
+      "tolerance": 0.08,
+      "required_metrics": [
+        "contact_fraction",
+        "recovery_ratio",
+        "settled",
+        "finite_fraction"
+      ],
+      "feedback_to_proposer": false
+    }
+  },
+  "calibration": {
+    "requires_real_stimulus": true,
+    "feedback_to_proposer": true,
+    "simulation_calibrated_means": "behavior contract pass only; not material ground truth"
+  },
+  "heldout": {
+    "requires_different_probe_id": true,
+    "requires_different_stimulus_action_config": true,
+    "feedback_to_proposer": false
+  },
+  "acceptance": {
+    "max_iterations": 3,
+    "max_iterations_cap": 8,
+    "budget_step": 2,
+    "budget_min_relative_improvement": 0.05,
+    "elastic_budget": "extra iterations are earned only while calibration loss keeps improving (>=5% relative per step); every escalation is a trace event; stalled loops stop at the base budget",
+    "update_gain": 0.5,
+    "timeout_seconds": 900,
+    "behavior_contract": "finite + contact + settled + deformation/recovery within band; thresholds are scale-relative (particle size, grid cell, asset height, peak speed)"
+  },
+  "render_policy": {
+    "calibration": false,
+    "heldout": false,
+    "note": "rendering disabled by default in the rebuild runner; frames are not evidence"
+  },
+  "mesh_normalization_rule": "surface mesh is decimated or voxelized by Genesis preprocessor; normalized asset unit scaled by metric scale rule",
+  "scale_rule": "metric scale comes from VLM prior or family fallback; never claimed as measured ground truth",
+  "status_vocabulary": [
+    "accepted_first_pass",
+    "corrected_then_accepted",
+    "rejected_model_limit",
+    "rejected_numerical_failure",
+    "uncertain_human_escalation"
+  ],
+  "formal_status_vocabulary": [
+    "verified",
+    "rejected",
+    "task_failure"
+  ],
+  "status_mapping": {
+    "accepted_first_pass": "verified",
+    "corrected_then_accepted": "verified",
+    "rejected_model_limit": "rejected",
+    "uncertain_human_escalation": "rejected",
+    "rejected_numerical_failure": "task_failure",
+    "note": "accepted_first_pass counts as prior-compatible only, never as correction success"
+  },
+  "family_capability_gate": "unsupported routes terminate as rejected_model_limit with explicit evidence; no fallback to a generic model; MPM solid and PBD cloth routes are implemented",
+  "claim_boundary": "simulator-grounded behavior contract; not measured material ground truth",
+  "simulation_calibrated_definition": "frozen probe behavior contract passed",
+  "ipc_used": false,
+  "uipc_used": false,
+  "external_baselines": {
+    "status": "disabled",
+    "reason": "checkpoint/data/hash unavailable"
+  },
+  "qualification_evidence": {
+    "date": "2026-09-17",
+    "scope": "local 10-asset qualification (6 MPM solids + 4 cloth-routed), multi-GPU workers, VLM-in-the-loop (Qwen)",
+    "output_root": "local qualification workspace (non-release scratch; not an identity reference)",
+    "run_manifest_sha256": "sha256:cb335adb730865f1fe579d1aab6797944e7849a351e208b7d65a3e75f05f5860",
+    "bundle_index_sha256": "sha256:c83ec8bc81cb57448962600f3b24af079730dab1960a3ee4082b8ae3caefcf28",
+    "terminal_counts": {
+      "accepted_first_pass": 1,
+      "rejected_model_limit": 8,
+      "uncertain_human_escalation": 1
+    },
+    "note": "qualification is a partial, non-publishable subset; it is not a release; the uncertain task escalated on a Qwen transport timeout and is re-runnable"
+  },
+  "change_log": [
+    "2026-09-17: v12.2 frozen for the rebuilt verifier-guided agent. Differences from v12.1 (the 2026-09-07 production batch contract, kept frozen in method_contract.json): real behavior-contract runner (drop + compression with behavior metrics and bounded diagnosis) replaces the stability-only probe; Qwen VLM-in-the-loop proposer added alongside RuleTune; sizing rule derives per-asset numerics from prior scale; status mapping fixed (five agent states -> three formal states; numerical failure no longer misclassified as uncertain); behavior-failure vs executor-failure exit semantics separated; model-limit capability gate short-circuits; proposer may introduce whitelisted parameters absent from the prior.",
+    "2026-09-21: v12.5-candidate proposal (NOT frozen). Adds the mesh_adaptation v3 layer (see mesh_adaptation field). Numerics/thresholds of v12.2 are unchanged; the contract additions are: (1) proxy quality gate -> model_limit for unfit proxies (explicit, auditable); (2) engagement servo making the compression stimulus achieve its commanded ratio on the body; (3) recovery reference fallback for zero-height flat proxies (fixes a NaN metric, not a threshold); (4) contact-gated lateral CoM dissipation as a declared contact-friction surrogate. Requires gate-study calibration review before freezing; in particular the cloth deformation lower bound at exactly 0.0 rejects noise-level negative drift (observed -2e-4) and should get an epsilon from the gate-study window."
+  ],
+  "mesh_adaptation": {
+    "version": "v3",
+    "module": "code/scripts/mesh_adaptation.py",
+    "opt_in": "probe config or simulator config carries mesh_adaptation=\"v3\"; default path remains v12.2",
+    "mechanisms": [
+      "float32-aware vertex welding + degenerate/duplicate face removal (source hygiene)",
+      "MPM filled_volume: voxelize+closing+fill+marching cubes, watertight-verified, convex hull fallback with warning; watertight bag sources keep their boundary (v11 policy)",
+      "cloth: cloth_sheet flat grid mid-surface; sealed shells get bounded opening surgery; fragmented non-watertight sources are voxel-sealed (binary closing seals sub-pitch gaps) then opened; projected mid-surface fallback; dust-body filtering on multi-body seals",
+      "proxy quality report in metrics.mesh_adaptation (source + proxy: watertight, components, boundary edges, area/volume, aspect ratio, thinness) with verdict ok/degraded/unfit; unfit gates to model_limit with explicit defects; post-build particle/vertex floor gates",
+      "MPM hooks: InternalVelocityRelaxation (CoM-preserving) + ContactNormalDissipation (upward, contact+window gated) + v12.5 contact-gated lateral CoM dissipation (contact-friction surrogate)",
+      "cloth hook: post-contact exponential velocity damping",
+      "cloth compression: plate lift inside the PBD contact shell + near-zero plate friction (floor friction pinned the kinematic plates at small scales)",
+      "compression engagement servo (v3): plates chase the measured body axis extent to the commanded ratio with a gap floor; release retracts to the initial gap",
+      "recovery reference fallback: flat proxies with z_pre ~ 0 use compression-axis-extent recovery (thresholds unchanged)",
+      "MPM solver-scale normalization: scale_eff=min(scale_m, 0.5) with scale/24 particle ratio preserved — measured grid-coupling floor penetration at scale>=0.64 (clean icosphere: +0.010m at 0.5, -0.66m at 1.9) independent of particle_size; contract thresholds are scale-relative so the behavior contract is unchanged",
+      "cloth scenes use the Genesis default rigid constraint_timeconst (0.01) — the v12.2 value (2*dt/substeps) makes kinematic compression plates yield to contact resistance and never engage (measured bisect on garment_000933)",
+      "cloth compression plates: friction=0.01 (Genesis minimum) + lift within the PBD contact shell — the v12.2 lift (0.5*MPM particle size) floated plates over thin sheets",
+      "PBD bending REMAINS disabled (v12.5 re-tested enabling it with the v11 compliance cap: drop probes destabilized, garment/shell lost floor contact entirely — evidence in deployment/experiments/mesh_adapt)"
+    ]
+  }
+}

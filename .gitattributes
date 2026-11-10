@@ -1,0 +1,4 @@
+# Preserve imported snapshots, including intentional separating blank lines.
+* whitespace=-blank-at-eof
+# CSV snapshots retain original bytes for content-hash reproducibility.
+*.csv -text whitespace=cr-at-eol,-blank-at-eof

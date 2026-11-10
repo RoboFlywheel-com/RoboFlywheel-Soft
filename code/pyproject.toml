@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "softsim-formal-experiments"
+version = "0.1.0"
+description = "Auditable SoftSim-100K formal experiment runner and release contracts"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+
+[project.optional-dependencies]
+test = ["pytest>=7", "numpy>=1.24; python_version<'3.14'", "numpy>=2.3; python_version>='3.14'", "Pillow", "trimesh==4.7.4", "scipy", "rtree", "scikit-image", "networkx"]
+analysis = ["numpy>=1.24; python_version<'3.14'", "numpy>=2.3; python_version>='3.14'"]
+
+[project.scripts]
+softsim-exp = "softsim_formal.cli:main"
+fragile-soft-benchmark = "fragile_soft_benchmark.cli:main"
+softsim-physical-agent = "softsim_physical_agent.cli:main"
+
+[tool.setuptools]
+packages = ["fragile_soft_benchmark", "softsim_formal", "softsim_genesis_runner", "softsim_physical_agent", "softsim_tools"]
+py-modules = ["softsim_targets"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+fragile_soft_benchmark = "fragile_soft_benchmark"
+softsim_formal = "src/softsim_formal"
+softsim_genesis_runner = "src/softsim_genesis_runner"
+softsim_physical_agent = "src/softsim_physical_agent"
+softsim_tools = "scripts"
+
+[tool.setuptools.exclude-package-data]
+"*" = ["__pycache__/*", "*.py[cod]"]

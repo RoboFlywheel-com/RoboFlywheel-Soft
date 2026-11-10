@@ -1,0 +1,28 @@
+{
+  "schema_name": "softsim.e2_config",
+  "schema_version": 1,
+  "experiment_id": "e2-recovery",
+  "protocol_id": "softsim.e2.hidden-target.v1",
+  "candidate_budget": [1, 2, 4, 8],
+  "methods": [
+    "fixed_profile",
+    "one_shot_prior",
+    "ruletune",
+    "seeded_sobol",
+    "vid2sid_style_reimplementation",
+    "swim2real_style_reimplementation",
+    "full_numeric_agent"
+  ],
+  "calibration_probe": "calibration.synthetic.compression.v1",
+  "heldout_probe": "heldout.synthetic.push.v1",
+  "heldout_feedback_allowed": false,
+  "hidden_target_policy": "evaluator_sidecar_required_in_production_inline_fixture_only",
+  "public_task_manifest_must_not_contain": ["hidden_target", "ground_truth", "oracle_parameters"],
+  "accepted_first_pass_counts_as_correction_success": false,
+  "external_baselines": {"status": "disabled", "reason": "no checkpoint/data/hash"},
+  "disabled_methods": {
+    "gp_bo_disabled_optional": "optional dependency/checkpoint not installed",
+    "external_policy_baseline": "checkpoint/data/source hash unavailable"
+  },
+  "production_full_run": false
+}

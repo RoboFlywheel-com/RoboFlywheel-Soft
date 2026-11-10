@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+testpaths = ["tests", "asset_pipeline/tests"]
+pythonpath = ["code/src", "code", "asset_pipeline/src"]
+addopts = "-ra"

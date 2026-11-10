@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softsim.local/schema/fragile-soft-video-keyframe-v1.json",
+  "type": "object",
+  "required": ["benchmark_instance_id", "video_status", "keyframe_status", "is_evidence"],
+  "properties": {
+    "benchmark_instance_id": {"type": "string"},
+    "video_status": {"type": "string"},
+    "keyframe_status": {"type": "string"},
+    "is_evidence": {"type": "boolean"},
+    "p0_reference_paths": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

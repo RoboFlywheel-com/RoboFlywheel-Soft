@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/asset_release_record",
+  "title": "SoftSim asset release v2 record",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "sample_id", "asset_revision_id", "dataset_release_id", "status", "geometry_ref", "metric_scale", "record_sha256"],
+  "properties": {
+    "schema_name": {"const": "softsim.asset_release_record"},
+    "schema_version": {"const": 2},
+    "sample_id": {"type": "string", "minLength": 1},
+    "asset_revision_id": {"type": "string", "minLength": 1},
+    "dataset_release_id": {"type": "string", "minLength": 1},
+    "status": {"const": "released"},
+    "geometry_ref": {"type": "object", "required": ["root_alias", "relative_path", "sha256"]},
+    "metric_scale": {
+      "type": "object",
+      "properties": {
+        "meters_per_unit": {"type": "number", "exclusiveMinimum": 0},
+        "scale_to_meter": {"type": "number", "exclusiveMinimum": 0},
+        "scale_m": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "anyOf": [{"required": ["meters_per_unit"]}, {"required": ["scale_to_meter"]}, {"required": ["scale_m"]}]
+    },
+    "record_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

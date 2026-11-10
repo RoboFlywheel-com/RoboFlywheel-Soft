@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/episode_record",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "run_id", "task_id", "case_id", "episode_id", "experiment_id", "protocol_hash", "data_role", "population", "denominator_scope", "method_id", "execution_status", "outcome_status", "failure_domain", "retriable", "record_sha256"],
+  "properties": {
+    "schema_name": {"enum": ["softsim.case_record", "softsim.episode_record", "softsim.call_record"]},
+    "schema_version": {"const": 1},
+    "protocol_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "execution_status": {"enum": ["completed", "failed", "invalid"]},
+    "outcome_status": {"enum": ["success", "failure", "rejected", "not_applicable", "blocked"]},
+    "failure_domain": {"enum": ["none", "infrastructure", "numerical", "contract", "policy", "task", "damage", "release"]},
+    "retriable": {"type": "boolean"},
+    "record_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "canonical_strata": {"type": "object"},
+    "metrics": {"type": "object"},
+    "outcomes": {"type": "object"},
+    "measurements": {"type": "object"}
+  },
+  "additionalProperties": true
+}

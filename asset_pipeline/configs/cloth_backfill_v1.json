@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "default_geometry": {
+    "width_m": 1.2,
+    "height_m": 0.8,
+    "cols": 48,
+    "rows": 32,
+    "broad_fold_amplitude_m": 0.01,
+    "edge_wave_amplitude_m": 0.002,
+    "edge_wave_frequency": 2,
+    "corner_lift_m": 0.005,
+    "uv_scale": 1.0
+  },
+  "geometry_profiles": [
+    {
+      "object_type_contains": ["scarf", "strap"],
+      "geometry": {
+        "width_m": 3.0,
+        "height_m": 0.45,
+        "cols": 96,
+        "rows": 16
+      }
+    },
+    {
+      "object_type_contains": ["curtain"],
+      "geometry": {
+        "width_m": 1.4,
+        "height_m": 2.4,
+        "cols": 48,
+        "rows": 80
+      }
+    },
+    {
+      "object_type_contains": ["yoga mat"],
+      "geometry": {
+        "width_m": 1.8,
+        "height_m": 0.65,
+        "cols": 72,
+        "rows": 28
+      }
+    },
+    {
+      "object_type_contains": ["blanket", "tablecloth", "towel", "tarpaulin", "fabric"],
+      "geometry": {
+        "width_m": 1.8,
+        "height_m": 1.2,
+        "cols": 72,
+        "rows": 48
+      }
+    }
+  ],
+  "qa": {
+    "max_faces": 20000,
+    "required_components": 1
+  }
+}
+

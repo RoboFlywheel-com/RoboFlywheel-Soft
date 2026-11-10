@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softsim.local/schema/fragile-soft-p0-adapter-v1.json",
+  "type": "object",
+  "required": ["schema_version", "source_sha256", "source_files", "assets"],
+  "properties": {
+    "schema_version": {"const": "fragile-soft.p0-adapter.v1"},
+    "source_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "source_files": {"type": "array", "items": {"type": "object", "required": ["path", "sha256", "exists"]}},
+    "assets": {"type": "array", "items": {"type": "object", "required": ["asset_id", "canonical_id", "material_profile", "geometry", "cases", "source_sha256", "asset_kind", "unique_geometry_asset"]}}
+  },
+  "additionalProperties": true
+}

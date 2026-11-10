@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softsim.local/schema/fragile-soft-scenario-v1.json",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "phases", "action_protocol", "evaluator_id", "evaluator_contract"],
+  "properties": {
+    "schema_version": {"const": "fragile-soft.scenario.v1"},
+    "scenario_id": {"const": "grasp-lift-hold.v1"},
+    "phases": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "object", "required": ["name", "steps"], "properties": {"name": {"enum": ["approach", "contact", "squeeze", "lift", "hold"]}, "steps": {"type": "integer", "minimum": 1}}}},
+    "action_protocol": {"type": "object", "required": ["gripper", "lift_axis", "force_ramp"]},
+    "evaluator_id": {"const": "fragile-soft.evaluator.v1"},
+    "evaluator_contract": {"type": "object", "required": ["fixed", "metrics"], "properties": {"fixed": {"const": true}, "metrics": {"type": "array", "minItems": 10}}}
+  },
+  "additionalProperties": true
+}

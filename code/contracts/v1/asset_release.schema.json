@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/asset_release",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "release_id", "publishable", "ledger_sha256", "population_count"],
+  "properties": {
+    "schema_name": {"const": "softsim.asset_release_manifest"},
+    "schema_version": {"const": 2},
+    "release_id": {"type": "string"},
+    "publishable": {"const": true},
+    "ledger_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "population_count": {"type": "integer", "minimum": 1}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://configs/schema/formal_run_record",
+  "title": "SoftSim unified run/case/episode/call record",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "run_id", "task_id", "case_id", "episode_id", "call_id", "population", "canonical_strata", "denominator_scope", "execution_status", "outcome_status", "failure_domain", "record_sha256"],
+  "properties": {
+    "schema_name": {"enum": ["softsim.run_manifest", "softsim.case_record", "softsim.episode_record", "softsim.call_record"]},
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "case_id": {"type": ["string", "null"]},
+    "episode_id": {"type": ["string", "null"]},
+    "call_id": {"type": ["string", "null"]},
+    "attempt_id": {"type": ["string", "null"], "pattern": "^attempt-[0-9]{3}$"},
+    "population": {"type": "string"},
+    "canonical_strata": {"type": "object"},
+    "denominator_scope": {"type": "string"},
+    "execution_status": {"enum": ["planned", "running", "completed", "failed", "invalid"]},
+    "outcome_status": {"enum": ["success", "failure", "rejected", "not_applicable", "blocked"]},
+    "failure_domain": {"type": "string"},
+    "record_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

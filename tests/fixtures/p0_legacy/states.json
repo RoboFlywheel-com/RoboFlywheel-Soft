@@ -1,0 +1,1 @@
+{"schema_version": 1, "states": [{"asset_id": "tofu", "state_path": "results/tofu/low/states.npz", "status": "pass"}, {"asset_id": "banana", "state_path": "results/banana/high/states.npz", "status": "pass"}]}

@@ -1,0 +1,6 @@
+RFW-S (RobotFlyWheel-Soft) Pipeline
+Copyright 2026 RFW-S contributors.
+
+This repository's original source code is distributed under Apache-2.0.
+Third-party software, model weights, and externally distributed datasets
+retain their own licenses. See docs/THIRD_PARTY.md and LICENSE.

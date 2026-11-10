@@ -1,0 +1,79 @@
+{
+  "schema_name": "softsim.method_contract",
+  "schema_version": 1,
+  "method_id": "softsim.genesis_proxy.v12.5-repair1-candidate",
+  "phase": "candidate_requires_gpu_qualification",
+  "genesis_version": "1.3.3",
+  "baseline_method_id": "softsim.genesis_proxy.v12.2",
+  "default_behavior_changed": false,
+  "opt_in": {"mesh_adaptation": "v4"},
+  "solver": {
+    "volume": "MPM.Elastic/MPM.ElastoPlastic",
+    "cloth": "PBD.Cloth",
+    "coupler": "LegacyCoupler",
+    "ipc_used": false,
+    "uipc_used": false,
+    "route_reassignment": false
+  },
+  "mesh": {
+    "scene_node_transforms_and_instances": "baked before concatenation",
+    "repair_frame": "centered source frame with longest extent one",
+    "weld_relative_precision": 0.000001,
+    "ignore_texture_and_normal_seams_for_physics": true,
+    "volume_policy": "preserve valid watertight boundary or padded voxel close/fill/marching cubes",
+    "voxel_resolution": 48,
+    "voxel_padding_cells": 2,
+    "convex_hull_fallback": false,
+    "surface_policy": "preserve clean open surface; silhouette sheet; sealed boundary opening; explicit projected fallback except bags",
+    "face_budget": 12000,
+    "dust_max_component_area_fraction": 0.001,
+    "dust_max_total_area_fraction": 0.01,
+    "pose": "source repair before uniform scale before rotation; same canonical proxy for both probes",
+    "quality_gate": "nonfinite, degenerate, nonmanifold, disconnected, extreme slivers, intersecting or unchecked proxy, sealed cloth, open or nonpositive MPM volume -> model_limit",
+    "self_intersection_scope": "nonincident triangle SAT including coplanar; shared-vertex pairs excluded; budget exhaustion explicit",
+    "maximum_intersection_candidate_pairs": 250000,
+    "sampling_gate": "actual Genesis particle count >=128 MPM / >=32 PBD; MPM thickness >=2 particle spacings",
+    "quality_location": "report.metrics.mesh_adaptation"
+  },
+  "visual_binding": {
+    "physics_affected": false,
+    "lod": "source-colored OBJ; explicit proxy-with-source-colors fallback for fragmented or mismatched LOD",
+    "alignment": "bidirectional point-to-triangle p95 / proxy diagonal <=0.08",
+    "surface": "nearest triangle barycentric, no cross-wall blending",
+    "volume": "local affine 18 supports; bounded positive fallback when L1 weights >10",
+    "sampling_order": "sample physics first, then replace visual fields",
+    "transform": "same explicit source-to-solver matrix as physics"
+  },
+  "numerical_policy_inherited_from_v3": {
+    "cloth_dt_s": 0.003,
+    "cloth_substeps": 10,
+    "mpm_solver_scale_cap_m": 0.5,
+    "contact_dissipation": "v3 hooks retained; solver surrogate, not identified material damping",
+    "pbd_bending_and_self_collision": "remain disabled as in baseline; capability limitation retained",
+    "flat_recovery_reference": "v3 compression-axis fallback retained; no new relaxation"
+  },
+  "compression": {
+    "stimulus": "full six-DOF plate pose and axis velocity prescribed each step",
+    "extra_response_dependent_travel": false,
+    "schedule": "nominal approach / hold / release; return to initial gap",
+    "contact_audit": "finite plate footprint and opposed contact counts; zero footprint contact -> rejected probe mismatch",
+    "acceptance_bands_changed": false
+  },
+  "diagnosis": {
+    "proxy_failure": "model_limit with exact defect codes and simulation_executed=false",
+    "unresolved_physical_failure": "material_prior_or_model_limit_unresolved; do not assert causality from co-occurrence",
+    "not_settled": "model_or_solver_limit_unresolved; no no-op viscosity patch or settle-driven plastic yield change"
+  },
+  "qualification": {
+    "required_rejected_tasks": 200,
+    "required_verified_controls": 20,
+    "required_gpus": 8,
+    "target_rescue_rate": 0.9,
+    "allowed_control_regressions": 0,
+    "render_each_probe": true,
+    "current_gpu_qualification": "not_executed_GPU_not_exposed_in_session",
+    "frozen_candidate_replay": "isolates adapter changes with zero paid proposer calls; not full agent correction success",
+    "historical_v124_51pct": "different 45-task cohort; cannot claim same-cohort improvement without replay"
+  },
+  "claim_boundary": "Candidate geometry repair and CPU integration validation are not GPU verification, measured material truth, or production release qualification."
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softsim.local/schema/fragile-soft-material-v1.json",
+  "type": "object",
+  "required": ["material_model_id", "implementation", "support_status", "surrogate", "explicit_fracture", "parameters", "parameter_hash", "requested_model_id"],
+  "properties": {
+    "material_model_id": {"type": "string"},
+    "implementation": {"type": "string"},
+    "support_status": {"enum": ["supported", "supported_surrogate", "unsupported", "invalid"]},
+    "surrogate": {"type": "boolean"},
+    "explicit_fracture": {"const": false},
+    "parameters": {"type": "object"},
+    "parameter_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+    ,"requested_model_id": {"type": "string"},
+    "capability_scope": {"type": ["string", "null"]},
+    "surrogate_reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

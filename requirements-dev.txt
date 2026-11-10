@@ -1,0 +1,2 @@
+-e ./code[test,analysis]
+-e ./asset_pipeline[test]

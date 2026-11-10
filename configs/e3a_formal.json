@@ -1,0 +1,54 @@
+{
+  "schema_name": "softsim.e3a_config",
+  "schema_version": 1,
+  "experiment_id": "e3a",
+  "protocol_id": "softsim.e3a.failure-in-the-loop.v1",
+  "task": "approach -> grasp -> lift_30mm -> hold_2s",
+  "policy_visible": [
+    "rgbd_or_pointcloud",
+    "proprioception",
+    "approved_sensor_stream"
+  ],
+  "policy_hidden": [
+    "particles",
+    "stress",
+    "Jp",
+    "damage_state",
+    "evaluator_threshold"
+  ],
+  "force_schedule_n": [
+    6.0,
+    15.0,
+    30.0
+  ],
+  "metrics": [
+    "task_success",
+    "damage_fraction",
+    "integrity",
+    "safe_force_window",
+    "slip",
+    "contact_count",
+    "convergence"
+  ],
+  "failure_episode_metrics_required": true,
+  "damage_model": "TofuDamage.continuum_damage_stiffness_loss_surrogate",
+  "explicit_fracture": false,
+  "qualification_required": true,
+  "production_full_run": false,
+  "methods": [
+    "fixed",
+    "reactive_slip",
+    "deligrasp_prior",
+    "privileged_oracle"
+  ],
+  "baseline_track_c": {
+    "fixed": "frozen global closure schedule (low/high from force_schedule_n)",
+    "reactive_slip": "aperture-reactive width-slip response (no force stream under LegacyCoupler)",
+    "deligrasp_prior": "DeliGrasp-style feed-forward commanded force from frozen prior cache; NOT closed-loop DeliGrasp",
+    "privileged_oracle": "teacher-only closure sweep with privileged damage readout; excluded from deployable ranking"
+  },
+  "track_l_v": {
+    "status": "disabled_pending_training",
+    "reason": "DP3/RLPD/RGB-DP/pi0.5 require trained checkpoints; demo generation via privileged_oracle + obs logging lands first"
+  }
+}

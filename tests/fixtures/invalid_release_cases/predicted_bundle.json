@@ -1,0 +1,9 @@
+{
+  "sample_id": "negative-predicted",
+  "asset_revision_id": "negative-predicted-r001",
+  "physical_bundle_id": "negative-predicted-bundle",
+  "dataset_release_id": "negative",
+  "status": "predicted",
+  "failure_code": "prior_only_not_verified",
+  "note": "Use the complete fixture release plus this row to exercise ReleaseReader.predicted_bundle."
+}

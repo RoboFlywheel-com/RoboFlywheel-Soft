@@ -1,0 +1,11 @@
+{
+  "schema_name": "softsim.release_layout",
+  "schema_version": 1,
+  "asset_release": {"release_id": "softsim-100k-assets-v2", "manifest": "asset_release_v2/release_manifest.json", "ledger": "asset_release_v2/asset_ledger.jsonl"},
+  "physical_release": {"release_id": "softsim-100k-agent-genesis-v12", "manifest": "physical_release_v12/physical_release_manifest.json", "index": "physical_release_v12/physical_bundle_index.jsonl"},
+  "benchmark": {"release_id": "softsim-fragile-soft-benchmark", "manifest": "fragile_soft_benchmark/instance_manifest.jsonl"},
+  "method_contract": "method_contract.json",
+  "artifact_identity": "logical_root_alias_plus_posix_relative_path_plus_sha256",
+  "forbidden_authority_inputs": ["predicted", "prior_only", "staging", "latest", "tmp_symlink"],
+  "production_population_note": "100000 terminal tasks is not 100000 released assets; verified/rejected/task_failure remain separate"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/physical_bundle",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "sample_id", "asset_revision_id", "status", "route", "solver_numerics", "verification", "agent"],
+  "properties": {
+    "schema_name": {"const": "softsim.physics_bundle"},
+    "schema_version": {"type": "integer", "minimum": 2},
+    "sample_id": {"type": "string", "minLength": 1},
+    "asset_revision_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["accepted_first_pass", "corrected_then_accepted", "rejected_model_limit", "rejected_numerical_failure", "uncertain_human_escalation"]},
+    "solver_numerics": {"type": "object", "required": ["particle_size_m", "dt_s", "substeps", "grid_density", "scale_m", "seed", "proxy_mode"]},
+    "verification": {"type": "object", "required": ["calibration", "heldout", "heldout_feedback_used"]},
+    "agent": {"type": "object", "required": ["policy_version", "trace_ref", "decision"]}
+  }
+}

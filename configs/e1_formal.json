@@ -1,0 +1,17 @@
+{
+  "schema_name": "softsim.e1_config",
+  "schema_version": 1,
+  "experiment_id": "e1-runtime",
+  "protocol_id": "softsim.e1.runtime-contract.v1",
+  "promotion": [
+    {"stage": "fixture", "count": 10},
+    {"stage": "showcase", "count": 150},
+    {"stage": "pilot", "count": 200}
+  ],
+  "probes": ["import", "initialize", "settle", "finite", "stability", "task"],
+  "failure_domains": ["infrastructure", "numerical", "contract", "policy", "task"],
+  "denominator_scope": "planned_tasks_including_failures",
+  "seed": 20260828,
+  "synthetic_fixture_allowed": true,
+  "production_full_run": false
+}

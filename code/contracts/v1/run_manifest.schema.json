@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/run_manifest",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "run_id", "experiment_id", "protocol_hash", "expected_task_count", "task_manifest_sha256", "config_hash", "code_hash", "population", "denominator_scope"],
+  "properties": {
+    "schema_name": {"const": "softsim.run_manifest"},
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "protocol_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "expected_task_count": {"type": "integer", "minimum": 0},
+    "task_manifest_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "config_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "code_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "population": {"type": "string", "minLength": 1},
+    "denominator_scope": {"type": "string", "minLength": 1},
+    "source_hashes": {"type": "object"},
+    "source_release_ids": {"type": "object"}
+  },
+  "additionalProperties": true
+}

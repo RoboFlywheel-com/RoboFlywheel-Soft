@@ -1,0 +1,12 @@
+{
+  "schema_name": "softsim.probe_contract",
+  "schema_version": 1,
+  "calibration_probe_id": "calibration.drop.corner_first.v1",
+  "heldout_probe_id": "heldout.compression.lateral.v1",
+  "calibration_stimulus": {"kind": "drop", "orientation": "corner_first"},
+  "heldout_stimulus": {"kind": "compression", "axis": "x"},
+  "calibration_action": {"kind": "release"},
+  "heldout_action": {"kind": "compress_release"},
+  "heldout_feedback_used": false,
+  "required_behavior_metrics": ["contact_fraction", "settled", "finite_fraction"]
+}

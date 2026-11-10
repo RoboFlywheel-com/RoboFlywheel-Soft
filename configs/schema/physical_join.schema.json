@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://softsim.local/schema/fragile-soft-physical-join-v1.json",
+  "type": "object",
+  "required": ["schema_version", "physical_release_id", "index_count", "instance_count", "counts", "errors", "all_joined_verified"],
+  "properties": {
+    "schema_version": {"const": "fragile-soft.physical-join.v1"},
+    "physical_release_id": {"type": ["string", "null"]},
+    "index_count": {"type": "integer", "minimum": 0},
+    "instance_count": {"type": "integer", "minimum": 0},
+    "counts": {"type": "object", "required": ["joined_verified", "joined_nonverified", "missing", "ambiguous"]},
+    "errors": {"type": "array"},
+    "all_joined_verified": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

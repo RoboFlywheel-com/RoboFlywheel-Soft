@@ -1,0 +1,14 @@
+figure_id: F_FORMAL_SUMMARY
+source_run_ids: []
+input_tables: [episodes]
+filters: {}
+exclusions: []
+paired_key: paired_scenario_key
+group_by: [method_id]
+metric_names: [task_success, heldout_behavior_error, damage_fraction]
+estimator: mean
+confidence_interval: cluster_bootstrap_95
+bootstrap_seed: 20260828
+cluster_key: sample_id
+style_version: softsim-paper-v1
+formal_numbers_allowed: false

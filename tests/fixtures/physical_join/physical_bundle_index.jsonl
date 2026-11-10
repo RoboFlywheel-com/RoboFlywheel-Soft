@@ -1,0 +1,2 @@
+{"sample_id":"sample-0","asset_revision_id":"sample-0-r1","physical_bundle_id":"pb-real-0","status":"verified","dataset_release_id":"softsim-100k-agent-genesis-v12-fixture"}
+{"sample_id":"sample-1","asset_revision_id":"sample-1-r1","physical_bundle_id":"pb-rejected-1","status":"rejected","dataset_release_id":"softsim-100k-agent-genesis-v12-fixture"}

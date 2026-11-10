@@ -1,0 +1,39 @@
+{
+  "schema_name": "softsim.agent_config",
+  "schema_version": 2,
+  "method_id": "softsim.genesis_proxy.v12.2",
+  "genesis_version": "1.3.3",
+  "solver_contract": {"cloth": "PBD.Cloth", "volume": "MPM.Elastic/MPM.ElastoPlastic", "coupler": "LegacyCoupler", "ipc_used": false, "uipc_used": false},
+  "backend": "mock",
+  "proposer_backend": "ruletune",
+  "max_iterations": 4,
+  "update_gain": 0.7,
+  "allowed_physical_parameters": [
+    "density_kg_m3",
+    "youngs_modulus_pa",
+    "poisson_ratio",
+    "yield_stress_pa",
+    "yield_lower",
+    "yield_higher",
+    "plastic_viscosity_pa_s",
+    "tensile_cohesion_pa",
+    "friction_static",
+    "friction_dynamic"
+  ],
+  "calibration_probe": {
+    "probe_id": "calibration.drop.corner_first.v1",
+    "stimulus": {"kind": "drop", "height_m": 0.18, "orientation": "corner_first", "floor": "rigid_plane"},
+    "action": {"kind": "release", "gripper": "none", "contact_schedule": "single_impact"},
+    "config": {"steps": 48, "dt_s": 0.001, "record_every": 4, "seed_offset": 11},
+    "tolerance": 0.05,
+    "required_metrics": ["loss", "contact_fraction", "settled", "deformation_ratio"]
+  },
+  "heldout_probe": {
+    "probe_id": "heldout.compression.lateral.v1",
+    "stimulus": {"kind": "compression", "compression_ratio": 0.22, "axis": "x", "rate": "quasi_static"},
+    "action": {"kind": "compress_release", "hold_steps": 8, "release_steps": 8},
+    "config": {"steps": 64, "dt_s": 0.0008, "record_every": 4, "seed_offset": 97},
+    "tolerance": 0.08,
+    "required_metrics": ["loss", "contact_fraction", "settled", "recovery_ratio"]
+  }
+}

@@ -1,0 +1,29 @@
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.22\linewidth}>{\raggedright\arraybackslash}p{.18\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\multicolumn{4}{@{}l}{\textbf{A. Scale, semantic organization, and physical scope}} \\
+Resource & Reported scale / unit & Category organization & Object scope \\
+\midrule
+Objaverse-XL & 10M+ 3D objects & Diverse source collections & Broad visual geometry \\
+CLOTH3D & 11.3K garments; 2.1M time samples & Six garment groups & Simulated clothing \\
+SoftGym & 10 environments & Task-defined objects & Rope, cloth, fluid \\
+ManiTwin-100K & 100K 3D objects & 512 categories & Rigid graspable objects \\
+PhysXVerse & 8.7K+ 3D assets & 2.9K+ general categories & Rigid, deformable, articulated \\
+Agentic Real2Sim & 100 rigid episodes evaluated; qualitative extensions & Episode-defined objects & Rigid, deformable, humanoid \\
+\textbf{RFW-S} & \textbf{100K pool; 83,365 jointly verified} & \textbf{485 everyday categories} & \textbf{Five deformable families} \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}p{.22\linewidth}>{\raggedright\arraybackslash}p{.27\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\multicolumn{4}{@{}l}{\textbf{B. Parameters, validation protocol, and associated evidence}} \\
+Resource & Physical construction & Reported evaluation & Evidence / reusable output \\
+\midrule
+Objaverse-XL & Source 3D geometry & Visual-generation evaluation & Deduplicated objects, renders \\
+CLOTH3D & Blender fabric presets & Cloth motion on body sequences & Meshes, vertex motion, fabric labels \\
+SoftGym & Parameterized FleX environments & Manipulation-policy rollouts & Environments, state and reward \\
+ManiTwin-100K & Inferred size, mass, friction & Grasp stability and slide resistance & Mesh, properties, verified grasp poses \\
+PhysXVerse / Omni & Part-wise physical attributes & Human annotation review; free-fall / water-drop scoring & Physical assets, six-attribute benchmark \\
+Agentic Real2Sim & Inferred episodic simulation & Replay-based candidate judging & Executable twins, replay observations \\
+\textbf{RFW-S} & \textbf{Representations and effective solver values} & \textbf{Calibration, frozen-candidate independent probe, runtime check} & \textbf{Geometry, parameters, reports, correction traces} \\
+\bottomrule
+\end{tabularx}

@@ -1,0 +1,119 @@
+{
+  "schema_name": "softsim.agent_config",
+  "schema_version": 2,
+  "method_id": "softsim.genesis_proxy.v12.2",
+  "genesis_version": "1.3.3",
+  "solver_contract": {
+    "cloth": "PBD.Cloth",
+    "volume": "MPM.Elastic/MPM.ElastoPlastic",
+    "coupler": "LegacyCoupler",
+    "ipc_used": false,
+    "uipc_used": false
+  },
+  "backend": "genesis",
+  "proposer_backend": "qwen",
+  "api_key_env": "DASHSCOPE_API_KEY",
+  "command": [
+    "${GENESIS_PYTHON}",
+    "scripts/genesis_probe.py",
+    "--asset-json",
+    "{asset_json}",
+    "--candidate-json",
+    "{candidate_json}",
+    "--probe-json",
+    "{probe_json}",
+    "--simulator-config-json",
+    "{simulator_config_json}",
+    "--output-dir",
+    "{output_dir}",
+    "--report-json",
+    "{report_json}"
+  ],
+  "proposer_command": [
+    "python3",
+    "code/scripts/qwen_proposer_transport.py",
+    "--request",
+    "{request_json}",
+    "--response",
+    "{response_json}",
+    "--model",
+    "qwen3.8-max"
+  ],
+  "timeout_sec": 900,
+  "genesis_runner_env": "GENESIS_MPM_DROP_RUNNER",
+  "behavior_runner_env": "SOFTSIM_GENESIS_BEHAVIOR_RUNNER",
+  "genesis_python_env": "GENESIS_PYTHON",
+  "max_iterations": 3,
+  "update_gain": 0.5,
+  "allowed_physical_parameters": [
+    "density_kg_m3",
+    "youngs_modulus_pa",
+    "poisson_ratio",
+    "yield_stress_pa",
+    "yield_lower",
+    "yield_higher",
+    "plastic_viscosity_pa_s",
+    "tensile_cohesion_pa",
+    "friction_static",
+    "friction_dynamic"
+  ],
+  "require_behavior_metrics": true,
+  "calibration_probe": {
+    "probe_id": "calibration.drop.corner_first.v1",
+    "stimulus": {
+      "kind": "drop",
+      "height_m": 0.18,
+      "orientation": "corner_first",
+      "floor": "rigid_plane"
+    },
+    "action": {
+      "kind": "release",
+      "gripper": "none",
+      "contact_schedule": "single_impact"
+    },
+    "config": {
+      "steps": 420,
+      "dt_s": 0.0007,
+      "record_every": 4,
+      "seed_offset": 11
+    },
+    "tolerance": 0.05,
+    "required_metrics": [
+      "contact_fraction",
+      "settled",
+      "deformation_ratio",
+      "finite_fraction"
+    ]
+  },
+  "heldout_probe": {
+    "probe_id": "heldout.compression.lateral.v1",
+    "stimulus": {
+      "kind": "compression",
+      "compression_ratio": 0.22,
+      "axis": "x",
+      "rate": "quasi_static"
+    },
+    "action": {
+      "kind": "compress_release",
+      "hold_steps": 28,
+      "release_steps": 28
+    },
+    "config": {
+      "steps": 560,
+      "dt_s": 0.0006,
+      "record_every": 8,
+      "seed_offset": 97
+    },
+    "tolerance": 0.08,
+    "required_metrics": [
+      "contact_fraction",
+      "recovery_ratio",
+      "settled",
+      "finite_fraction"
+    ]
+  },
+  "proposer_timeout_sec": 420,
+  "max_iterations_cap": 8,
+  "budget_step": 2,
+  "budget_min_relative_improvement": 0.05
+}

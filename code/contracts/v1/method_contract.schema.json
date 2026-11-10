@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/method_contract",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "method_id", "genesis_version", "solver", "ipc_used", "uipc_used", "simulation_calibrated_definition"],
+  "properties": {
+    "schema_name": {"const": "softsim.method_contract"},
+    "schema_version": {"const": 1},
+    "method_id": {"const": "softsim.genesis_proxy.v12.1"},
+    "genesis_version": {"const": "1.3.3"},
+    "solver": {"type": "object", "required": ["cloth", "volume", "coupler"], "properties": {"cloth": {"const": "PBD.Cloth"}, "volume": {"const": "MPM.Elastic/MPM.ElastoPlastic"}, "coupler": {"const": "LegacyCoupler"}}},
+    "ipc_used": {"const": false},
+    "uipc_used": {"const": false},
+    "simulation_calibrated_definition": {"type": "string"},
+    "external_baselines": {"type": "object"}
+  },
+  "additionalProperties": true
+}

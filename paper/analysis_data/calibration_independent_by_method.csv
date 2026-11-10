@@ -1,0 +1,15 @@
+experiment,method,n,cal_pass_held_pass,cal_pass_held_fail,cal_fail_held_pass,cal_fail_held_fail,calibration_unavailable
+recovery,fixed_profile,120,99,4,1,11,5
+recovery,full_numeric_agent,120,97,5,0,14,4
+recovery,one_shot_prior,120,98,5,1,15,1
+recovery,ruletune,120,97,6,1,13,3
+recovery,seeded_sobol,120,97,9,0,11,3
+recovery,swim2real_style_reimplementation,120,96,10,0,12,2
+recovery,vid2sid_style_reimplementation,120,98,10,0,7,5
+filter,fixed_profile,1200,1152,48,0,0,0
+filter,full_numeric_agent,1200,1158,42,0,0,0
+filter,one_shot_prior,1200,1148,52,0,0,0
+filter,ruletune,1200,1151,49,0,0,0
+filter,seeded_sobol,1200,1156,44,0,0,0
+filter,swim2real_style_reimplementation,1200,1159,41,0,0,0
+filter,vid2sid_style_reimplementation,1200,1151,49,0,0,0

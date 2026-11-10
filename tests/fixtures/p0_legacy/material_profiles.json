@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {"id": "tofu", "profile_id": "P-FOOD-CRUSH", "forces_n_per_finger": [6, 15, 40], "material": {"model": "damage", "youngs_modulus_pa": 28000, "poisson_ratio": 0.32, "density_kg_m3": 950, "compressive_yield_strain": 0.055, "tensile_yield_strain": 0.025, "damage_start_compressive_strain": 0.052, "damage_complete_compressive_strain": 0.0565, "residual_stiffness_fraction": 0.004}},
+    {"id": "banana", "profile_id": "P-FRUIT-SKIN+FLESH", "forces_n_per_finger": [6, 16, 28], "material": {"model": "damage", "youngs_modulus_pa": 42000, "poisson_ratio": 0.42, "density_kg_m3": 910, "compressive_yield_strain": 0.07, "tensile_yield_strain": 0.035, "damage_start_compressive_strain": 0.065, "damage_complete_compressive_strain": 0.086, "residual_stiffness_fraction": 0.015}},
+    {"id": "dough", "profile_id": "P-PLASTIC-FOOD", "forces_n_per_finger": [4, 10, 20], "material": {"model": "plastic", "youngs_modulus_pa": 18000, "poisson_ratio": 0.38, "density_kg_m3": 1050, "yield_lower": 0.028, "yield_higher": 0.012}},
+    {"id": "slow_rise_foam_toy", "profile_id": "P-FOAM-SLOW", "forces_n_per_finger": [5, 12, 24], "material": {"model": "compression_set", "youngs_modulus_pa": 22000, "poisson_ratio": 0.30, "density_kg_m3": 220, "yield_lower": 0.065, "yield_higher": 0.025}}
+  ]
+}

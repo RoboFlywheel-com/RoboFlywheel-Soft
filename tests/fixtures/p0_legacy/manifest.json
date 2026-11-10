@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {"id": "tofu", "canonical_id": "soft_food_form__tofu", "collision": "assets/tofu/collision.obj", "preview": "assets/tofu/preview.png", "source_status": "existing_experiment_asset", "extents_m": [0.05, 0.044, 0.034], "watertight": true},
+    {"id": "banana", "canonical_id": "compressible_fruit__banana", "collision": "assets/banana/collision.obj", "preview": "assets/banana/preview.png", "source_status": "existing_100k_image_parametric_collision", "extents_m": [0.064, 0.034, 0.038], "watertight": true},
+    {"id": "dough", "canonical_id": "baked_soft_food__dough", "collision": "assets/dough/collision.obj", "preview": "assets/dough/preview.png", "source_status": "existing_100k_image_parametric_collision", "extents_m": [0.056, 0.044, 0.032], "watertight": true},
+    {"id": "slow_rise_foam_toy", "canonical_id": "foam_solid__slow_rise_foam_toy", "collision": "assets/slow_rise_foam_toy/collision.obj", "preview": "assets/slow_rise_foam_toy/preview.png", "source_status": "existing_100k_image_parametric_collision", "extents_m": [0.048, 0.042, 0.044], "watertight": true}
+  ]
+}

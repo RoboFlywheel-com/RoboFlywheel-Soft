@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/task_spec",
+  "type": "object",
+  "required": ["task_id", "experiment_id", "protocol_hash", "population", "data_role", "seed", "trial_index", "canonical_strata"],
+  "properties": {
+    "task_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "experiment_id": {"type": "string"},
+    "protocol_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "population": {"type": "string"},
+    "data_role": {"enum": ["calibration", "dev", "test", "hidden_test"]},
+    "seed": {"type": "integer"},
+    "trial_index": {"type": "integer", "minimum": 0},
+    "canonical_strata": {"type": "object"}
+  },
+  "additionalProperties": true
+}

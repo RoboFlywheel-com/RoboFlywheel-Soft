@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "softsim://contracts/v1/probe_report",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "probe_id", "probe_hash", "stimulus_hash", "action_hash", "config_hash", "behavior_pass", "metrics", "diagnosis", "execution_status"],
+  "properties": {
+    "schema_name": {"const": "softsim.probe_report"},
+    "schema_version": {"type": "integer", "minimum": 2},
+    "probe_id": {"type": "string", "minLength": 1},
+    "probe_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "stimulus_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "action_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "config_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "behavior_pass": {"type": "boolean"},
+    "metrics": {"type": "object", "minProperties": 1},
+    "diagnosis": {"type": "object"},
+    "execution_status": {"type": "string"}
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "catalog_kind": "production_solver_catalog",
+  "catalog_source": "softsim.genesis_world_1_2.v1",
+  "catalog_references": [
+    "https://genesis-world.readthedocs.io/en/v1.2.1/api_reference/material/pbd/cloth.html",
+    "https://genesis-world.readthedocs.io/en/v1.2.1/api_reference/material/pbd/elastic.html",
+    "https://genesis-world.readthedocs.io/en/v1.2.1/api_reference/material/mpm/elastic.html",
+    "https://genesis-world.readthedocs.io/en/v1.2.1/api_reference/material/mpm/elasto_plastic.html",
+    "https://genesis-world.readthedocs.io/en/v1.2.2/api_reference/material/fem/cloth.html",
+    "https://genesis-world.readthedocs.io/en/v1.2.2/api_reference/material/fem/elastic.html"
+  ],
+  "core_parameters": [
+    "longest_dimension_m",
+    "mass_kg"
+  ],
+  "solver_numeric_parameters": [],
+  "parameters": {
+    "air_resistance": {"lower": 0.0, "upper": 1.0, "unit": "1/s"},
+    "bending_compliance_rad_n": {"lower": 1e-10, "upper": 0.1, "unit": "rad/N"},
+    "bending_stiffness": {"lower": 0.0, "upper": 1000.0, "unit": "N*m"},
+    "density_kg_m3": {"lower": 5.0, "upper": 5000.0, "unit": "kg/m^3"},
+    "friction_kinetic": {"lower": 0.0, "upper": 2.0, "unit": "dimensionless"},
+    "friction_static": {"lower": 0.0, "upper": 2.0, "unit": "dimensionless"},
+    "longest_dimension_m": {"lower": 0.005, "upper": 20.0, "unit": "m"},
+    "mass_kg": {"lower": 0.0001, "upper": 5000.0, "unit": "kg"},
+    "poisson_ratio": {"lower": 0.0, "upper": 0.499, "unit": "dimensionless"},
+    "stretch_compliance_m_n": {"lower": 1e-10, "upper": 0.01, "unit": "m/N"},
+    "surface_density_kg_m2": {"lower": 0.01, "upper": 30.0, "unit": "kg/m^2"},
+    "thickness_m": {"lower": 1e-05, "upper": 0.1, "unit": "m"},
+    "volume_compliance_m3_n": {"lower": 1e-12, "upper": 0.01, "unit": "m^3/N"},
+    "von_mises_yield_stress_pa": {"lower": 100.0, "upper": 100000000.0, "unit": "Pa"},
+    "youngs_modulus_pa": {"lower": 100.0, "upper": 1000000000.0, "unit": "Pa"}
+  },
+  "models": {
+    "genesis_fem_cloth_ipc": {
+      "simulation_domain": "surface_dynamics",
+      "representations": ["surface_mesh"],
+      "solver": "genesis.materials.FEM.Cloth",
+      "required_parameters": [
+        "longest_dimension_m",
+        "mass_kg",
+        "density_kg_m3",
+        "youngs_modulus_pa",
+        "poisson_ratio",
+        "thickness_m",
+        "bending_stiffness",
+        "friction_static"
+      ],
+      "fixed": {"coupler": "IPC", "model": "stable_neohookean", "requires_gpu": true}
+    },
+    "genesis_fem_elastic": {
+      "simulation_domain": "volumetric_soft_body",
+      "representations": ["tetrahedralized_surface_mesh"],
+      "solver": "genesis.materials.FEM.Elastic",
+      "required_parameters": [
+        "longest_dimension_m",
+        "mass_kg",
+        "density_kg_m3",
+        "youngs_modulus_pa",
+        "poisson_ratio",
+        "friction_static"
+      ],
+      "fixed": {"model": "stable_neohookean"}
+    },
+    "genesis_mpm_elastic": {
+      "simulation_domain": "volumetric_soft_body",
+      "representations": ["surface_mesh_voxelized"],
+      "solver": "genesis.materials.MPM.Elastic",
+      "required_parameters": [
+        "longest_dimension_m",
+        "mass_kg",
+        "density_kg_m3",
+        "youngs_modulus_pa",
+        "poisson_ratio"
+      ],
+      "fixed": {"model": "corotation", "sampler": "pbs"}
+    },
+    "genesis_mpm_elastoplastic": {
+      "simulation_domain": "volumetric_soft_body",
+      "representations": ["surface_mesh_voxelized"],
+      "solver": "genesis.materials.MPM.ElastoPlastic",
+      "required_parameters": [
+        "longest_dimension_m",
+        "mass_kg",
+        "density_kg_m3",
+        "youngs_modulus_pa",
+        "poisson_ratio",
+        "von_mises_yield_stress_pa"
+      ],
+      "fixed": {"sampler": "pbs", "use_von_mises": true}
+    },
+    "genesis_pbd_cloth": {
+      "simulation_domain": "surface_dynamics",
+      "representations": ["surface_mesh"],
+      "solver": "genesis.materials.PBD.Cloth",
+      "required_parameters": [
+        "longest_dimension_m",
+        "mass_kg",
+        "surface_density_kg_m2",
+        "friction_static",
+        "friction_kinetic",
+        "stretch_compliance_m_n",
+        "bending_compliance_rad_n",
+        "air_resistance"
+      ],
+      "fixed": {"stretch_relaxation": 0.3, "bending_relaxation": 0.1}
+    },
+    "genesis_pbd_elastic": {
+      "simulation_domain": "volumetric_soft_body",
+      "representations": ["surface_mesh_particleized"],
+      "solver": "genesis.materials.PBD.Elastic",
+      "required_parameters": [
+        "longest_dimension_m",
+        "mass_kg",
+        "density_kg_m3",
+        "friction_static",
+        "friction_kinetic",
+        "stretch_compliance_m_n",
+        "bending_compliance_rad_n",
+        "volume_compliance_m3_n"
+      ],
+      "fixed": {"stretch_relaxation": 0.1, "bending_relaxation": 0.1, "volume_relaxation": 0.1}
+    }
+  }
+}

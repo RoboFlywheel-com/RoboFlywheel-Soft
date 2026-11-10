@@ -1,0 +1,72 @@
+{
+  "schema_name": "softsim.representation_review_contract",
+  "schema_version": 1,
+  "version": "v5-review",
+  "phase": "human_review_candidate",
+  "baseline_method_id": "softsim.genesis_proxy.v12.2",
+  "default_behavior_changed": false,
+  "entrypoint": "code/scripts/genesis_adaptation_review.py",
+  "selection": "all selected assets, including historical rejected and unsupported routes",
+  "behavior_gate_filtering": false,
+  "profiles": {
+    "sheet": {"solver": "PBD.Cloth", "geometry": "projected sheet", "bending": false},
+    "garment_cloth": {"solver": "PBD.Cloth", "geometry": "local surface repair when bounded; otherwise prior 3D boundary", "bending": false, "stretch_compliance": 0.0000001, "self_collision": true, "validation": "four-asset no-bending ablation complete; combined surface repair GPU run pending"},
+    "garment_shell": {"solver": "PBD.Cloth", "geometry": "3D open boundary", "bending_compliance": 0.002},
+    "bag_shell": {"solver": "PBD.Cloth", "geometry": "3D open boundary", "bending_compliance": 0.0004},
+    "reinforced_shell": {"solver": "PBD.Cloth", "geometry": "3D boundary with bounded opening", "bending_compliance": 0.00001},
+    "sealed_membrane": {"solver": "PBD.Cloth", "geometry": "closed oriented boundary", "bending_compliance": 0.0005},
+    "filled_volume": {"solver": "MPM.Elastic/MPM.ElastoPlastic", "geometry": "closed material volume"}
+  },
+  "mesh": {
+    "physical_face_budget_target": 6500,
+    "voxel_resolution": 40,
+    "source_up_axis": "Y",
+    "world_up_axis": "Z",
+    "scale_before_drop_rotation": true,
+    "planar_fallback_for_3d_shell": false,
+    "noncloth_sheet_name_geometry_guard": "PCA minimum/maximum extent > 0.18 preserves a 3D shell; explicit user overrides take priority",
+    "residual_components": "retained independently with warnings; bounded dust removal inherited from v4",
+    "quality_location": "report.geometry"
+  },
+  "shell": {
+    "rest_curvature": "source per-hinge unsigned dihedral angle",
+    "global_shape_matching": false,
+    "open_bag_pressure": false,
+    "sealed_membrane": "per-component normalized volume compliance 0.01, two projections per bending call",
+    "maximum_projection_displacement_scale_ratio": 0.02,
+    "scene_scope": "one PBD entity, one environment; standalone review runner",
+    "not_identified_material_parameters": true
+  },
+  "visual": {
+    "source_colors": "baked per-face padded UV atlas from source LOD colors",
+    "surface_binding": "nearest triangle barycentric; 3D shells additionally retain corotated local visual offsets; sheets stay on their projected midsurface",
+    "fragmented_source_skin": "bounded dust removal and bidirectional alignment recheck before falling back to proxy appearance",
+    "sheet_skin": "single physical midsurface with transferred source colors; double-sided rendering",
+    "ground_display_extent": "8 times solver length; analytic plane collision retained, avoiding kilometer-scale raster depth artifacts",
+    "volume_binding": "bounded local affine 18-particle supports",
+    "segmentation_level": "entity",
+    "source_preview": "rigid turntable, explicitly not a simulation",
+    "full_source_PBR": false
+  },
+  "numerics": {
+    "solver_scale_range_m": [0.12, 0.5],
+    "PBD_dt_s": 0.003,
+    "PBD_substeps": 10,
+    "MPM_estimated_wave_CFL_max": 0.25,
+    "MPM_max_substeps": 256,
+    "default_steps": 900,
+    "compression": "fixed full-height lateral plates; approach, hold, release on a prescribed schedule"
+  },
+  "qualification": {
+    "human_appearance_review_required_before_freeze": true,
+    "verified_rescue_rate_claim": false,
+    "production_contract_gate_changes": false,
+    "limitations": [
+      "Profile choice uses object-name heuristics and supports explicit per-asset overrides.",
+      "No recovered sewing patterns, anisotropic fabric, identified wall thickness or stiffness.",
+      "Sealed volume compliance is not gas thermodynamics or a fluid contents simulation.",
+      "Local unsigned bending angles do not certify orientation preservation or collision freedom.",
+      "Successful rendering is not material calibration or physical verification."
+    ]
+  }
+}

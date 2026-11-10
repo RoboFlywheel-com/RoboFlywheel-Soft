@@ -1,0 +1,15 @@
+experiment,method,n,success,error_n,mean_error
+recovery,fixed_profile,120,100,115,0.052099549217391294
+recovery,one_shot_prior,120,99,119,0.07039808151260504
+recovery,ruletune,120,98,117,0.06263659205128205
+recovery,seeded_sobol,120,97,117,0.06704380042735042
+recovery,vid2sid_style_reimplementation,120,98,115,0.06219940321739131
+recovery,swim2real_style_reimplementation,120,96,118,0.07340038067796607
+recovery,full_numeric_agent,120,97,116,0.06907797991379311
+filter,fixed_profile,1200,1152,1200,0.012704644891666667
+filter,one_shot_prior,1200,1148,1200,0.012768171916666666
+filter,ruletune,1200,1151,1200,0.012494530425
+filter,seeded_sobol,1200,1156,1200,0.012074857958333332
+filter,vid2sid_style_reimplementation,1200,1151,1200,0.012821978191666666
+filter,swim2real_style_reimplementation,1200,1159,1200,0.011839555408333334
+filter,full_numeric_agent,1200,1158,1200,0.011684880033333334

@@ -1,0 +1,16 @@
+{
+  "schema_name": "softsim.formal_executor_contract",
+  "schema_version": 1,
+  "reference": "module:function",
+  "call": "executor(task, run_manifest, attempt_dir, target_provider=optional)",
+  "process_isolation": "--process-isolation starts a fresh worker process per task",
+  "returns": "episode_record or [episode_record, agent_steps, call_records]",
+  "required_record_fields": ["run_id", "task_id", "episode_id", "protocol_hash", "population", "denominator_scope", "execution_status", "outcome_status", "failure_domain", "record_sha256"],
+  "e2_required_trace_phases": ["calibration", "candidate_frozen", "heldout_verification"],
+  "e2_abstain_terminal_phase": "abstain (uncertain_human_escalation; ends before freeze, held-out never run)",
+  "e2_required_summary_fields": ["prior_parameters", "final_parameters", "candidate_count"],
+  "e3a_required_measurements": ["damage_fraction", "integrity", "safe_force_window", "slip", "contact_count", "convergence"],
+  "production_required": true,
+  "synthetic_fixture_fallback": false,
+  "claim_boundary": "executor evidence must come from frozen Genesis/policy runtime; deterministic formula backend is fixture-only"
+}
