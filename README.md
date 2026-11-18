@@ -2,11 +2,16 @@
 
 # RFW-S: Everyday Deformable Objects with Independent Simulation Verification
 
-<!-- Author list, affiliations, and venue to be added once publicly confirmed. -->
+Jiarui Guo<sup>1,2,\*</sup>, Saining Zhang<sup>2,3,\*,†</sup>, Jiaying Wan<sup>2</sup>, Jiawei Weng<sup>1</sup>, Junhao Chen<sup>2</sup>, Rui Zhang<sup>1,2</sup>, Yuanbo Lyu<sup>1</sup>, Zhiheng Lee<sup>2</sup>, Peishuo Li<sup>3</sup>, Jingrun Du<sup>1,2</sup>, Weiqing Xiao<sup>4</sup>, Weiyi Lin<sup>1</sup>, Zenan Meng<sup>1,‡</sup>, Hu Wei<sup>1,‡</sup>, Lin Qu<sup>1</sup>, Zongzheng Zhang<sup>2</sup>, Hao Zhao<sup>2</sup>, Chaojian Li<sup>5,‡</sup>
+
+<sup>1</sup>Alibaba Group &nbsp; <sup>2</sup>Tsinghua University &nbsp; <sup>3</sup>Nanyang Technological University &nbsp; <sup>4</sup>Nanjing University &nbsp; <sup>5</sup>The Hong Kong University of Science and Technology
+
+<sub>\*Equal contribution. †Project leader. ‡Corresponding authors.</sub>
 
 </div>
 
 <div align="center">
+  <a href="https://arxiv.org/abs/2611.23056"><img src="https://img.shields.io/badge/arXiv-2611.23056-b5212f.svg?logo=arxiv" height="22px"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" height="22px"></a>
   <a href="docs/REPRODUCIBILITY.md"><img src="https://img.shields.io/badge/Paper%20Tables-Reproducible-276cb4.svg" height="22px"></a>
   <a href="README_zh.md"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E-green.svg" height="22px"></a>
@@ -104,14 +109,14 @@ This Git repository contains code, small synthetic fixtures, and analysis data. 
 
 ## 📖 Citation
 
-The associated manuscript is **RFW-S: Everyday Deformable Objects with Independent Simulation Verification**. Its arXiv source is prepared, but this snapshot does not contain a confirmed public identifier or complete author metadata. See [CITATION.cff](CITATION.cff); add the confirmed identifier and author list when available.
+The associated manuscript is **RFW-S: Everyday Deformable Objects with Independent Simulation Verification** ([arXiv:2611.23056](https://arxiv.org/abs/2611.23056)). See also [CITATION.cff](CITATION.cff).
 
 ```bibtex
-@misc{rfws2026,
-  title  = {RFW-S: Everyday Deformable Objects with Independent Simulation Verification},
-  author = {{RFW-S contributors}},
-  year   = {2026},
-  note   = {Author list and publication identifier to be confirmed}
+@article{guo2026rfws,
+  title   = {RFW-S: Everyday Deformable Objects with Independent Simulation Verification},
+  author  = {Guo, Jiarui and Zhang, Saining and Wan, Jiaying and Weng, Jiawei and Chen, Junhao and Zhang, Rui and Lyu, Yuanbo and Lee, Zhiheng and Li, Peishuo and Du, Jingrun and Xiao, Weiqing and Lin, Weiyi and Meng, Zenan and Wei, Hu and Qu, Lin and Zhang, Zongzheng and Zhao, Hao and Li, Chaojian},
+  journal = {arXiv preprint arXiv:2611.23056},
+  year    = {2026}
 }
 ```
 

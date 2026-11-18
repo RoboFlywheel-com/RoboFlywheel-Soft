@@ -1,10 +1,49 @@
 cff-version: 1.2.0
-message: "Please cite the associated RFW-S manuscript; confirmed author metadata and publication identifier will be added when available."
+message: "If you use this software or the associated analysis data, please cite the RFW-S manuscript."
 title: "RFW-S: Everyday Deformable Objects with Independent Simulation Verification"
 type: software
 authors:
-  - name: "RFW-S contributors"
+  - given-names: Jiarui
+    family-names: Guo
+  - given-names: Saining
+    family-names: Zhang
+  - given-names: Jiaying
+    family-names: Wan
+  - given-names: Jiawei
+    family-names: Weng
+  - given-names: Junhao
+    family-names: Chen
+  - given-names: Rui
+    family-names: Zhang
+  - given-names: Yuanbo
+    family-names: Lyu
+  - given-names: Zhiheng
+    family-names: Lee
+  - given-names: Peishuo
+    family-names: Li
+  - given-names: Jingrun
+    family-names: Du
+  - given-names: Weiqing
+    family-names: Xiao
+  - given-names: Weiyi
+    family-names: Lin
+  - given-names: Zenan
+    family-names: Meng
+  - given-names: Hu
+    family-names: Wei
+  - given-names: Lin
+    family-names: Qu
+  - given-names: Zongzheng
+    family-names: Zhang
+  - given-names: Hao
+    family-names: Zhao
+  - given-names: Chaojian
+    family-names: Li
 version: 0.1.0
 date-released: 2026-10-26
 license: Apache-2.0
 repository-code: "https://github.com/RoboFlywheel-com/RoboFlywheel-Soft"
+identifiers:
+  - type: doi
+    value: 10.48550/arXiv.2611.23056
+    description: "The associated manuscript on arXiv"
