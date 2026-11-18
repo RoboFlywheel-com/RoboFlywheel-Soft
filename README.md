@@ -11,6 +11,7 @@ Jiarui Guo<sup>1,2,\*</sup>, Saining Zhang<sup>2,3,\*,†</sup>, Jiaying Wan<sup
 </div>
 
 <div align="center">
+  <a href="https://roboflywheel-com.github.io/RoboFlywheel-Soft/"><img src="https://img.shields.io/badge/Project%20Page-333399.svg?logo=googlehome" height="22px"></a>
   <a href="https://arxiv.org/abs/2611.23056"><img src="https://img.shields.io/badge/arXiv-2611.23056-b5212f.svg?logo=arxiv" height="22px"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" height="22px"></a>
   <a href="docs/REPRODUCIBILITY.md"><img src="https://img.shields.io/badge/Paper%20Tables-Reproducible-276cb4.svg" height="22px"></a>
