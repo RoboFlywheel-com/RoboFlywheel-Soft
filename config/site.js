@@ -185,13 +185,18 @@ window.RFWS_SITE = {
 ],
   links: {
     manuscript: "assets/RFW-S_manuscript.pdf",
-    arxiv: "",
+    arxiv: "https://arxiv.org/abs/2611.23056",
     code: "https://github.com/RoboFlywheel-com/RoboFlywheel-Soft",
     dataset: "",
     license: "https://github.com/RoboFlywheel-com/RoboFlywheel-Soft/blob/main/LICENSE"
   },
   canonicalUrl: "https://roboflywheel-com.github.io/RoboFlywheel-Soft/",
-  citation: "", // Insert only the author-approved BibTeX; no generated identities.
+  citation: `@article{guo2026rfws,
+  title={RFW-S: Everyday Deformable Objects with Independent Simulation Verification},
+  author={Guo, Jiarui and Zhang, Saining and Wan, Jiaying and Weng, Jiawei and Chen, Junhao and Zhang, Rui and Lyu, Yuanbo and Lee, Zhiheng and Li, Peishuo and Du, Jingrun and Xiao, Weiqing and Lin, Weiyi and Meng, Zenan and Wei, Hu and Qu, Lin and Zhang, Zongzheng and Zhao, Hao and Li, Chaojian},
+  journal={arXiv preprint arXiv:2611.23056},
+  year={2026}
+}`,
   census: [
     {family: "Soft solids", categories: 168, pool: 34641, physical: 21112, runtime: 34502, both: 21103},
     {family: "Cloth sheets", categories: 89, pool: 18347, physical: 18308, runtime: 18097, both: 18064},
