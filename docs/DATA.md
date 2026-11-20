@@ -10,7 +10,7 @@ The `v1` schema directory and `schema_version` values describe recorded interfac
 
 ## Distributed separately
 
-The full 100,000-asset pool, images, meshes, physical bundles, videos, production execution evidence, and evaluator-only parameter sidecars are absent from this Git release. No confirmed public full-data URL is configured yet. Local fixtures and analysis CSVs are usable immediately; replaying full-scale simulation requires the corresponding external payload and hash manifests.
+The full 100,000-asset pool, images, meshes, physical bundles, videos, production execution evidence, and evaluator-only parameter sidecars are absent from this Git release. The public dataset release is hosted on ModelScope: [RoboFlywheel/RoboFlywheel-Soft](https://modelscope.cn/datasets/RoboFlywheel/RoboFlywheel-Soft). Local fixtures and analysis CSVs are usable immediately; replaying full-scale simulation requires the corresponding external payload and hash manifests.
 
 A formal release is expected to expose:
 

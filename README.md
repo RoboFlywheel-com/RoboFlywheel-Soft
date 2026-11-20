@@ -13,6 +13,7 @@ Jiarui Guo<sup>1,2,\*</sup>, Saining Zhang<sup>2,3,\*,†</sup>, Jiaying Wan<sup
 <div align="center">
   <a href="https://roboflywheel-com.github.io/RoboFlywheel-Soft/"><img src="https://img.shields.io/badge/Project%20Page-333399.svg?logo=googlehome" height="22px"></a>
   <a href="https://arxiv.org/abs/2611.23056"><img src="https://img.shields.io/badge/arXiv-2611.23056-b5212f.svg?logo=arxiv" height="22px"></a>
+  <a href="https://modelscope.cn/datasets/RoboFlywheel/RoboFlywheel-Soft"><img src="https://img.shields.io/badge/ModelScope-Dataset-624FE8.svg" height="22px"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-yellow.svg" height="22px"></a>
   <a href="docs/REPRODUCIBILITY.md"><img src="https://img.shields.io/badge/Paper%20Tables-Reproducible-276cb4.svg" height="22px"></a>
   <a href="README_zh.md"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E-green.svg" height="22px"></a>
@@ -106,7 +107,7 @@ See [installation](docs/INSTALL.md) for the optional mesh dependencies, GPU runt
 | `tests/`, `asset_pipeline/tests/` | Local fixtures and regression tests |
 | `paper/` | Analysis CSV snapshot and manuscript table generator |
 
-This Git repository contains code, small synthetic fixtures, and analysis data. Full meshes, reference images, trajectories, production physical bundles, model weights, and evaluator-only targets are **not included**. A public full-dataset download URL has not been configured in this snapshot; see [data availability](docs/DATA.md). Cloud-specific job launchers and credentials are excluded.
+This Git repository contains code, small synthetic fixtures, and analysis data. The full dataset (meshes, reference images, trajectories, production physical bundles) is distributed separately on ModelScope: [RoboFlywheel/RoboFlywheel-Soft](https://modelscope.cn/datasets/RoboFlywheel/RoboFlywheel-Soft); see [data availability](docs/DATA.md). Model weights and evaluator-only targets are **not included**. Cloud-specific job launchers and credentials are excluded.
 
 ## 📖 Citation
 
