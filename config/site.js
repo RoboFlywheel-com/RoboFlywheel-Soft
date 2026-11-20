@@ -187,7 +187,7 @@ window.RFWS_SITE = {
     manuscript: "assets/RFW-S_manuscript.pdf",
     arxiv: "https://arxiv.org/abs/2611.23056",
     code: "https://github.com/RoboFlywheel-com/RoboFlywheel-Soft",
-    dataset: "",
+    dataset: "https://modelscope.cn/datasets/RoboFlywheel/RoboFlywheel-Soft",
     license: "https://github.com/RoboFlywheel-com/RoboFlywheel-Soft/blob/main/LICENSE"
   },
   canonicalUrl: "https://roboflywheel-com.github.io/RoboFlywheel-Soft/",
